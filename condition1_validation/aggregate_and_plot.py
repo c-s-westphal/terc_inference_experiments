@@ -143,20 +143,49 @@ def aggregate_by_env(results: List[dict]) -> dict:
 
 def convert_to_x_notation(label: str) -> str:
     """
-    Convert pair label from index notation to X_i notation.
+    Convert pair label from various notations to X_i notation.
 
     Examples:
         "{0,1} vs {2,3}" -> "{X_1,X_2} vs {X_3,X_4}"
         "{t-1,t-2} vs {t-3}" -> "{X_1,X_2} vs {X_3}"
+        "{x,x_dot} vs {theta}" -> "{X_1,X_2} vs {X_3}"
     """
-    # First handle "t-N" notation (IPD environments)
+    # Mapping for gym environment variable names
+    gym_var_mappings = {
+        # CartPole variables
+        'x': 'X_1',
+        'x_dot': 'X_2',
+        'theta': 'X_3',
+        'theta_dot': 'X_4',
+        # Pendulum variables
+        'cos_theta': 'X_1',
+        'sin_theta': 'X_2',
+        # theta_dot already mapped above for CartPole, reuse X_3 for Pendulum
+    }
+
+    # Check if label contains gym variable names
+    has_gym_vars = any(var in label for var in gym_var_mappings.keys())
+
+    if has_gym_vars:
+        result = label
+        # Sort by length descending to replace longer names first (e.g., theta_dot before theta)
+        for var in sorted(gym_var_mappings.keys(), key=len, reverse=True):
+            if var in result:
+                # For Pendulum, theta_dot should be X_3
+                if var == 'theta_dot' and 'cos_theta' in label:
+                    result = result.replace(var, 'X_3')
+                else:
+                    result = result.replace(var, gym_var_mappings[var])
+        return result
+
+    # Handle "t-N" notation (IPD environments)
     def replace_t_notation(match):
         idx = int(match.group(1))
         return f"X_{idx}"
 
     result = re.sub(r't-(\d+)', replace_t_notation, label)
 
-    # Then handle plain index notation (gym environments)
+    # Handle plain index notation
     def replace_index(match):
         idx = int(match.group(0))
         return f"X_{idx + 1}"
@@ -196,7 +225,7 @@ def plot_single_env_ax(ax, env_name: str, data: dict, top_n: int = 15, show_ylab
     if not pair_stats:
         ax.text(0.5, 0.5, 'No data available', ha='center', va='center',
                 transform=ax.transAxes, fontsize=12, color='gray')
-        ax.set_title(env_name.replace('_', ' ').title(), fontsize=12, fontweight='bold')
+        ax.set_title(env_name.replace('_', ' ').title(), fontsize=12)
         setup_axes_style(ax)
         return
 
@@ -229,7 +258,7 @@ def plot_single_env_ax(ax, env_name: str, data: dict, top_n: int = 15, show_ylab
     # Shade the "not verified" region (above threshold)
     y_max = max(max(means) + max(stds) * 1.5 if stds else max(means) * 1.2, H_A * 1.3)
     ax.axhspan(H_A, y_max * 1.1, alpha=NOT_VERIFIED_ALPHA, color=NOT_VERIFIED_COLOR,
-               label='Not verified')
+               label='Condition 1 not verified')
 
     # Apply consistent styling
     setup_axes_style(ax)
@@ -250,7 +279,7 @@ def plot_single_env_ax(ax, env_name: str, data: dict, top_n: int = 15, show_ylab
 
     # Title
     env_display = env_name.replace('_', ' ').title()
-    ax.set_title(env_display, fontsize=12, fontweight='bold')
+    ax.set_title(env_display, fontsize=12)
 
     # Legend
     ax.legend(loc='upper right', fontsize=8, frameon=False)
@@ -272,7 +301,7 @@ def plot_gym_environments(aggregated: dict, output_dir: Path):
             # Blank plot for missing data
             ax.text(0.5, 0.5, 'No data available', ha='center', va='center',
                     transform=ax.transAxes, fontsize=12, color='gray')
-            ax.set_title(title, fontsize=12, fontweight='bold')
+            ax.set_title(title, fontsize=12)
             setup_axes_style(ax)
             ax.set_xlabel(r'Subset pairs $\mathcal{P}_1$ and $\mathcal{P}_2$', fontsize=10)
             if idx == 0:
@@ -304,7 +333,7 @@ def plot_skg_environments(aggregated: dict, output_dir: Path):
         else:
             ax.text(0.5, 0.5, 'No data available', ha='center', va='center',
                     transform=ax.transAxes, fontsize=12, color='gray')
-            ax.set_title(title, fontsize=12, fontweight='bold')
+            ax.set_title(title, fontsize=12)
             setup_axes_style(ax)
 
     plt.tight_layout()
@@ -338,7 +367,7 @@ def plot_ipd_environments(aggregated: dict, output_dir: Path):
         else:
             ax.text(0.5, 0.5, 'No data available', ha='center', va='center',
                     transform=ax.transAxes, fontsize=12, color='gray')
-            ax.set_title(title, fontsize=12, fontweight='bold')
+            ax.set_title(title, fontsize=12)
             setup_axes_style(ax)
             ax.set_xlabel(r'Subset pairs $\mathcal{P}_1$ and $\mathcal{P}_2$', fontsize=10)
             if idx % 4 == 0:
@@ -404,7 +433,7 @@ def plot_summary_comparison(aggregated: dict, output_dir: Path):
     # Shade the "not verified" region (below zero = negative margin)
     y_min = min(min(margins) - max(margin_stds) * 1.5 if margins else 0, -0.1)
     ax.axhspan(y_min * 1.1, 0, alpha=NOT_VERIFIED_ALPHA, color=NOT_VERIFIED_COLOR,
-               label='Not verified')
+               label='Condition 1 not verified')
 
     # Apply consistent styling
     setup_axes_style(ax)
@@ -426,7 +455,7 @@ def plot_summary_comparison(aggregated: dict, output_dir: Path):
     ax.legend(loc='upper right', fontsize=9, frameon=False)
 
     # Title
-    ax.set_title('Condition 1 Validation Summary', fontsize=12, fontweight='bold')
+    ax.set_title('Condition 1 Validation Summary', fontsize=12)
 
     plt.tight_layout()
 
