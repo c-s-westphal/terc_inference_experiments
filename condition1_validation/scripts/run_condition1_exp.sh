@@ -14,8 +14,26 @@ set -euo pipefail
 hostname
 date
 
+# ---------------------------------------------------------------------
+# 0.  Determine script directory and change to repo root
+# ---------------------------------------------------------------------
+# Get the directory where this script lives
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+# Go up two levels to repo root
+REPO_ROOT="$( cd "$SCRIPT_DIR/../.." && pwd )"
+cd "$REPO_ROOT"
+echo "Working directory: $(pwd)"
+
 number=$SGE_TASK_ID
 paramfile="condition1_validation/scripts/jobs_condition1.txt"
+
+# Check if paramfile exists
+if [[ ! -f "$paramfile" ]]; then
+  echo "ERROR: Parameter file not found: $paramfile" >&2
+  echo "Current directory: $(pwd)" >&2
+  echo "Contents: $(ls -la)" >&2
+  exit 1
+fi
 
 # ---------------------------------------------------------------------
 # 1.  Load toolchains and activate virtual-env
