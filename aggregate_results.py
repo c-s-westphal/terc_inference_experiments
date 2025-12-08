@@ -31,6 +31,8 @@ def parse_args():
     parser.add_argument('--format', type=str, default='table',
                         choices=['table', 'latex', 'csv'],
                         help='Output format for summary')
+    parser.add_argument('--fresh-only', action='store_true',
+                        help='Only use freshly trained results (exclude checkpoint-loaded)')
     return parser.parse_args()
 
 
@@ -350,6 +352,13 @@ def main():
     print(f"Loading results from {input_dir}...")
     results = load_all_results(input_dir)
     print(f"Loaded {len(results)} individual result files")
+
+    # Filter for fresh-only if requested
+    if args.fresh_only:
+        original_count = len(results)
+        results = [r for r in results
+                   if not r.get('training_info', {}).get('loaded_from_checkpoint', True)]
+        print(f"Filtered to {len(results)} freshly-trained results (excluded {original_count - len(results)} checkpoint-loaded)")
 
     if len(results) == 0:
         print("ERROR: No result files found!")

@@ -242,7 +242,19 @@ def main():
     if model_path.exists() and not args.force_retrain:
         print(f"Loading existing model from {model_path}")
         model = create_model(args.env, state_dim, action_dim)
-        model.load_state_dict(torch.load(model_path, map_location=device))
+        model.load_state_dict(torch.load(model_path, map_location=device, weights_only=True))
+        model.to(device)
+        model.eval()
+
+        # Warmup pass to trigger any lazy initialization/JIT compilation
+        print("Running warmup passes after checkpoint load...")
+        dummy_input = torch.randn(1, state_dim, device=device)
+        with torch.no_grad():
+            for _ in range(100):
+                _ = model(dummy_input)
+        if device.type == 'cuda':
+            torch.cuda.synchronize()
+
         training_info = {'loaded_from_checkpoint': True}
     else:
         print("Training new model...")
@@ -260,7 +272,8 @@ def main():
         training_info['training_time_seconds'] = training_time
         training_info['loaded_from_checkpoint'] = False
 
-        # Save model
+        # Save model in eval mode
+        model.eval()
         torch.save(model.state_dict(), model_path)
         print(f"Model saved to {model_path}")
 
