@@ -37,11 +37,17 @@ env/
 .DS_Store
 Thumbs.db
 
-# Project specific
+# Project specific - results and models (generated on cluster)
 models_trained/*.pt
 results/individual/*.json
 results/*.json
+condition1_validation/results/individual/*.json
+condition1_validation/results/*.json
+condition1_validation/figures/*.pdf
+condition1_validation/figures/*.png
+trajectories/*.npz
 logs/inference_exp/*
+logs/condition1_exp/*
 *.log
 
 # Jupyter
@@ -51,3 +57,7 @@ logs/inference_exp/*
 !models_trained/.gitkeep
 !results/individual/.gitkeep
 !logs/inference_exp/.gitkeep
+!condition1_validation/results/individual/.gitkeep
+!condition1_validation/figures/.gitkeep
+!trajectories/.gitkeep
+!logs/condition1_exp/.gitkeep
