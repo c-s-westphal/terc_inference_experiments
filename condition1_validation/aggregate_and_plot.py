@@ -3,7 +3,7 @@
 Aggregate Condition 1 validation results and generate plots.
 
 Combines results from all individual JSON files and creates:
-1. Bar charts showing redundancy vs H(A) threshold for each environment
+1. Combined subplot figures for environment groups
 2. Summary table of all results
 3. Aggregated JSON with statistics across seeds
 
@@ -12,6 +12,7 @@ Usage:
 """
 
 import json
+import re
 from pathlib import Path
 from collections import defaultdict
 from datetime import datetime
@@ -20,6 +21,7 @@ from typing import Dict, List, Optional
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib as mpl
+import matplotlib.patches as mpatches
 
 # Style configuration
 TAB_PALETTE = ['tab:blue', 'tab:orange', 'tab:green', 'tab:red', 'tab:purple',
@@ -27,10 +29,16 @@ TAB_PALETTE = ['tab:blue', 'tab:orange', 'tab:green', 'tab:red', 'tab:purple',
 NULL_MODEL_COLOR = 'black'
 DECOY_COLOR = 'grey'
 ALPHA = 0.5
+NOT_VERIFIED_COLOR = 'red'
+NOT_VERIFIED_ALPHA = 0.15
 
-# Enable LaTeX-style math rendering
-mpl.rcParams['mathtext.fontset'] = 'cm'
-mpl.rcParams['font.family'] = 'serif'
+# Use Arial font
+mpl.rcParams['font.family'] = 'sans-serif'
+mpl.rcParams['font.sans-serif'] = ['Arial', 'Helvetica', 'DejaVu Sans']
+mpl.rcParams['mathtext.fontset'] = 'custom'
+mpl.rcParams['mathtext.rm'] = 'Arial'
+mpl.rcParams['mathtext.it'] = 'Arial:italic'
+mpl.rcParams['mathtext.bf'] = 'Arial:bold'
 
 
 def setup_axes_style(ax):
@@ -133,21 +141,63 @@ def aggregate_by_env(results: List[dict]) -> dict:
     return aggregated
 
 
+def convert_to_x_notation(label: str) -> str:
+    """
+    Convert pair label from index notation to X_i notation.
+
+    Examples:
+        "{0,1} vs {2,3}" -> "{X_1,X_2} vs {X_3,X_4}"
+        "{t-1,t-2} vs {t-3}" -> "{X_1,X_2} vs {X_3}"
+    """
+    # First handle "t-N" notation (IPD environments)
+    def replace_t_notation(match):
+        idx = int(match.group(1))
+        return f"X_{idx}"
+
+    result = re.sub(r't-(\d+)', replace_t_notation, label)
+
+    # Then handle plain index notation (gym environments)
+    def replace_index(match):
+        idx = int(match.group(0))
+        return f"X_{idx + 1}"
+
+    # Only replace standalone numbers (not already part of X_N)
+    result = re.sub(r'(?<!X_)(?<!X_\{)\b(\d+)\b', replace_index, result)
+
+    return result
+
+
 def format_pair_label(label: str) -> str:
-    """Convert pair label to LaTeX-friendly format."""
-    # Convert {a,b} vs {c} to $\{a,b\}$ vs $\{c\}$
-    label = label.replace('{', r'$\{$').replace('}', r'$\}$')
+    """Convert pair label to LaTeX-friendly format with X_i notation."""
+    # First convert indices to X_i notation
+    label = convert_to_x_notation(label)
+
+    # Split by " vs "
+    parts = label.split(' vs ')
+    if len(parts) == 2:
+        formatted_parts = []
+        for part in parts:
+            # Extract content between braces
+            content = part.strip('{}')
+            # Format as math mode with proper subscripts
+            content = re.sub(r'X_(\d+)', lambda m: f'X_{{{m.group(1)}}}', content)
+            formatted_parts.append(r'$\{' + content + r'\}$')
+        return ' vs '.join(formatted_parts)
+
     return label
 
 
-def plot_environment(env_name: str, data: dict, output_dir: Path, top_n: int = 15):
-    """Generate bar chart for one environment."""
+def plot_single_env_ax(ax, env_name: str, data: dict, top_n: int = 15, show_ylabel: bool = True):
+    """Plot a single environment on the given axes."""
 
     pair_stats = data['pair_stats']
     H_A = data['H_A_mean']
 
     if not pair_stats:
-        print(f"No pair stats for {env_name}, skipping plot")
+        ax.text(0.5, 0.5, 'No data available', ha='center', va='center',
+                transform=ax.transAxes, fontsize=12, color='gray')
+        ax.set_title(env_name.replace('_', ' ').title(), fontsize=12, fontweight='bold')
+        setup_axes_style(ax)
         return
 
     # Sort by mean -R (descending) and take top N
@@ -155,58 +205,148 @@ def plot_environment(env_name: str, data: dict, output_dir: Path, top_n: int = 1
     if len(sorted_pairs) > top_n:
         sorted_pairs = sorted_pairs[:top_n]
 
-    labels = [p[0] for p in sorted_pairs]
+    labels = [format_pair_label(p[0]) for p in sorted_pairs]
     means = [p[1]['mean'] for p in sorted_pairs]
     stds = [p[1]['std'] for p in sorted_pairs]
-
-    # Create figure
-    fig, ax = plt.subplots(figsize=(8, 4))
 
     x = np.arange(len(labels))
 
     # Color bars based on whether they're below threshold
     bar_colors = ['tab:green' if m < H_A else 'tab:red' for m in means]
 
-    # Bar plot
+    # Vertical bar plot
     ax.bar(x, means, align='center', color=bar_colors, alpha=ALPHA)
 
-    # Error bars (separate call for styling control)
-    ax.errorbar(x, means, yerr=stds, fmt='none', lw=1, capsize=9, capthick=1,
+    # Error bars
+    ax.errorbar(x, means, yerr=stds, fmt='none', lw=1, capsize=5, capthick=1,
                 color='black', zorder=10)
 
-    # Threshold line (red dashed)
+    # Threshold line (red dashed, horizontal)
     line_x = [-0.5, len(labels) - 0.5]
-    ax.plot(line_x, [H_A, H_A], "--", linewidth=1, color='red',
-            label=r'$H(A) = {:.2f}$ bits'.format(H_A))
+    ax.plot(line_x, [H_A, H_A], "--", linewidth=1.5, color='red',
+            label=r'$H(A) = {:.2f}$ bits'.format(H_A), zorder=5)
+
+    # Shade the "not verified" region (above threshold)
+    y_max = max(max(means) + max(stds) * 1.5 if stds else max(means) * 1.2, H_A * 1.3)
+    ax.axhspan(H_A, y_max * 1.1, alpha=NOT_VERIFIED_ALPHA, color=NOT_VERIFIED_COLOR,
+               label='Not verified')
 
     # Apply consistent styling
     setup_axes_style(ax)
 
-    # Labels with math notation
-    ax.set_xlabel(r'Subset Pairs $(S_1$ vs $S_2)$', fontsize=12)
-    ax.set_ylabel(r'Redundancy $-R$ (bits)', fontsize=12)
+    # Labels
+    ax.set_xlabel(r'Subset pairs $\mathcal{P}_1$ and $\mathcal{P}_2$', fontsize=10)
+    if show_ylabel:
+        ax.set_ylabel(r'Redundancy (Bits)', fontsize=10)
 
     # X-axis labels
     ax.set_xticks(x)
-    ax.set_xticklabels(labels, rotation=60, ha='right', fontsize=9)
+    ax.set_xticklabels(labels, rotation=60, ha='right', fontsize=8)
 
     # Y-axis limits
-    y_max = max(max(means) + max(stds) * 1.5 if stds else max(means) * 1.2, H_A * 1.3)
     y_min = min(0, min(means) - max(stds) * 1.5 if stds else min(means) * 1.2)
     ax.set_ylim(y_min, y_max)
     ax.set_xlim(-0.5, len(labels) - 0.5)
 
-    # Legend
-    ax.legend(loc='upper right', fontsize=9, frameon=False)
-
     # Title
     env_display = env_name.replace('_', ' ').title()
-    ax.set_title(f'Condition 1 Validation: {env_display}', fontsize=12, fontweight='bold')
+    ax.set_title(env_display, fontsize=12, fontweight='bold')
+
+    # Legend
+    ax.legend(loc='upper right', fontsize=8, frameon=False)
+
+
+def plot_gym_environments(aggregated: dict, output_dir: Path):
+    """Create combined plot for CartPole, LunarLander, Pendulum."""
+
+    fig, axes = plt.subplots(1, 3, figsize=(14, 5))
+
+    envs = ['cartpole', 'lunarlander', 'pendulum']
+    titles = ['CartPole', 'LunarLander', 'Pendulum']
+
+    for idx, (env, title) in enumerate(zip(envs, titles)):
+        ax = axes[idx]
+        if env in aggregated:
+            plot_single_env_ax(ax, title.lower(), aggregated[env], show_ylabel=(idx == 0))
+        else:
+            # Blank plot for missing data
+            ax.text(0.5, 0.5, 'No data available', ha='center', va='center',
+                    transform=ax.transAxes, fontsize=12, color='gray')
+            ax.set_title(title, fontsize=12, fontweight='bold')
+            setup_axes_style(ax)
+            ax.set_xlabel(r'Subset pairs $\mathcal{P}_1$ and $\mathcal{P}_2$', fontsize=10)
+            if idx == 0:
+                ax.set_ylabel(r'Redundancy (Bits)', fontsize=10)
 
     plt.tight_layout()
 
-    # Save figure
-    output_file = output_dir / f"condition1_{env_name}.pdf"
+    output_file = output_dir / "condition1_gym_environments.pdf"
+    plt.savefig(output_file, dpi=300, bbox_inches='tight')
+    plt.savefig(output_file.with_suffix('.png'), dpi=300, bbox_inches='tight')
+    plt.close()
+
+    print(f"Saved figure: {output_file}")
+
+
+def plot_skg_environments(aggregated: dict, output_dir: Path):
+    """Create combined plot for SKG25 and SKG50."""
+
+    fig, axes = plt.subplots(1, 2, figsize=(10, 5))
+
+    envs = ['skg25', 'skg50']
+    titles = ['SKG-25', 'SKG-50']
+
+    for idx, (env, title) in enumerate(zip(envs, titles)):
+        ax = axes[idx]
+        if env in aggregated:
+            data = aggregated[env].copy()
+            plot_single_env_ax(ax, title, data, show_ylabel=(idx == 0))
+        else:
+            ax.text(0.5, 0.5, 'No data available', ha='center', va='center',
+                    transform=ax.transAxes, fontsize=12, color='gray')
+            ax.set_title(title, fontsize=12, fontweight='bold')
+            setup_axes_style(ax)
+
+    plt.tight_layout()
+
+    output_file = output_dir / "condition1_skg_environments.pdf"
+    plt.savefig(output_file, dpi=300, bbox_inches='tight')
+    plt.savefig(output_file.with_suffix('.png'), dpi=300, bbox_inches='tight')
+    plt.close()
+
+    print(f"Saved figure: {output_file}")
+
+
+def plot_ipd_environments(aggregated: dict, output_dir: Path):
+    """Create 2-row subplot for IPD TF(N)T environments."""
+
+    # IPD environments from TF3T to TF10T
+    ipd_envs = [f'ipd_tf{n}t' for n in range(3, 11)]
+    n_envs = len(ipd_envs)
+
+    # 2 rows, 4 columns
+    fig, axes = plt.subplots(2, 4, figsize=(16, 8))
+    axes = axes.flatten()
+
+    for idx, env in enumerate(ipd_envs):
+        ax = axes[idx]
+        title = f'TF{idx + 3}T'
+
+        if env in aggregated:
+            data = aggregated[env]
+            plot_single_env_ax(ax, title, data, top_n=10, show_ylabel=(idx % 4 == 0))
+        else:
+            ax.text(0.5, 0.5, 'No data available', ha='center', va='center',
+                    transform=ax.transAxes, fontsize=12, color='gray')
+            ax.set_title(title, fontsize=12, fontweight='bold')
+            setup_axes_style(ax)
+            ax.set_xlabel(r'Subset pairs $\mathcal{P}_1$ and $\mathcal{P}_2$', fontsize=10)
+            if idx % 4 == 0:
+                ax.set_ylabel(r'Redundancy (Bits)', fontsize=10)
+
+    plt.tight_layout()
+
+    output_file = output_dir / "condition1_ipd_environments.pdf"
     plt.savefig(output_file, dpi=300, bbox_inches='tight')
     plt.savefig(output_file.with_suffix('.png'), dpi=300, bbox_inches='tight')
     plt.close()
@@ -245,7 +385,7 @@ def plot_summary_comparison(aggregated: dict, output_dir: Path):
             colors.append(DECOY_COLOR)
 
     # Create figure
-    fig, ax = plt.subplots(figsize=(10, 4))
+    fig, ax = plt.subplots(figsize=(12, 5))
 
     x = np.arange(len(env_labels))
 
@@ -253,20 +393,25 @@ def plot_summary_comparison(aggregated: dict, output_dir: Path):
     ax.bar(x, margins, align='center', color=colors, alpha=ALPHA)
 
     # Error bars
-    ax.errorbar(x, margins, yerr=margin_stds, fmt='none', lw=1, capsize=9,
+    ax.errorbar(x, margins, yerr=margin_stds, fmt='none', lw=1, capsize=5,
                 capthick=1, color='black', zorder=10)
 
     # Zero threshold line (red dashed)
     line_x = [-0.5, len(env_labels) - 0.5]
-    ax.plot(line_x, [0, 0], "--", linewidth=1, color='red',
-            label=r'Violation threshold (margin $= 0$)')
+    ax.plot(line_x, [0, 0], "--", linewidth=1.5, color='red',
+            label=r'Violation threshold (margin $= 0$)', zorder=5)
+
+    # Shade the "not verified" region (below zero = negative margin)
+    y_min = min(min(margins) - max(margin_stds) * 1.5 if margins else 0, -0.1)
+    ax.axhspan(y_min * 1.1, 0, alpha=NOT_VERIFIED_ALPHA, color=NOT_VERIFIED_COLOR,
+               label='Not verified')
 
     # Apply consistent styling
     setup_axes_style(ax)
 
-    # Labels with math notation
+    # Labels
     ax.set_xlabel('Environment', fontsize=12)
-    ax.set_ylabel(r'Margin: $H(A) - \max(-R)$ (bits)', fontsize=12)
+    ax.set_ylabel(r'Margin: $H(A) - \max(-R)$ (Bits)', fontsize=12)
 
     # X-axis labels
     ax.set_xticks(x)
@@ -274,7 +419,6 @@ def plot_summary_comparison(aggregated: dict, output_dir: Path):
 
     # Y-axis limits
     y_max = max(margins) + max(margin_stds) * 1.5 if margins else 1
-    y_min = min(min(margins) - max(margin_stds) * 1.5 if margins else 0, -0.1)
     ax.set_ylim(y_min, y_max)
     ax.set_xlim(-0.5, len(env_labels) - 0.5)
 
@@ -373,10 +517,15 @@ def main():
     # Aggregate
     aggregated = aggregate_by_env(results)
 
-    # Generate individual plots
-    print("\nGenerating individual environment plots...")
-    for env_name, data in aggregated.items():
-        plot_environment(env_name, data, output_dir)
+    # Generate combined subplot figures
+    print("\nGenerating Gym environments plot (CartPole, LunarLander, Pendulum)...")
+    plot_gym_environments(aggregated, output_dir)
+
+    print("\nGenerating SKG environments plot...")
+    plot_skg_environments(aggregated, output_dir)
+
+    print("\nGenerating IPD environments plot...")
+    plot_ipd_environments(aggregated, output_dir)
 
     # Generate summary plot
     print("\nGenerating summary plot...")
