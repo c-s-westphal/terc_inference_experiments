@@ -1,0 +1,112 @@
+{
+  "environment": "ipd_tf4t",
+  "seed": 2,
+  "n_vars": 3,
+  "terc_vars": [
+    "t-1",
+    "t-2",
+    "t-3"
+  ],
+  "state_type": "discrete",
+  "action_type": "discrete",
+  "H_A": 0.9480256631063328,
+  "n_samples": 10000,
+  "k_neighbors": 5,
+  "timestamp": "2025-12-08T14:48:55.229757",
+  "pairs": [
+    {
+      "s1_indices": [
+        0
+      ],
+      "s2_indices": [
+        1,
+        2
+      ],
+      "label": "{t-1} vs {t-2,t-3}",
+      "neg_R": -0.11552292844418854,
+      "H_A": 0.9480256631063328,
+      "margin": 1.0635485915505214,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1
+      ],
+      "s2_indices": [
+        0,
+        2
+      ],
+      "label": "{t-2} vs {t-1,t-3}",
+      "neg_R": -0.11537409092617978,
+      "H_A": 0.9480256631063328,
+      "margin": 1.0633997540325126,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        2
+      ],
+      "s2_indices": [
+        0,
+        1
+      ],
+      "label": "{t-3} vs {t-1,t-2}",
+      "neg_R": -0.11534216560213029,
+      "H_A": 0.9480256631063328,
+      "margin": 1.0633678287084631,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        1
+      ],
+      "s2_indices": [
+        2
+      ],
+      "label": "{t-1,t-2} vs {t-3}",
+      "neg_R": -0.11534216560212984,
+      "H_A": 0.9480256631063328,
+      "margin": 1.0633678287084627,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        2
+      ],
+      "s2_indices": [
+        1
+      ],
+      "label": "{t-1,t-3} vs {t-2}",
+      "neg_R": -0.11537409092617978,
+      "H_A": 0.9480256631063328,
+      "margin": 1.0633997540325126,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1,
+        2
+      ],
+      "s2_indices": [
+        0
+      ],
+      "label": "{t-2,t-3} vs {t-1}",
+      "neg_R": -0.11552292844418854,
+      "H_A": 0.9480256631063328,
+      "margin": 1.0635485915505214,
+      "assumption_satisfied": true,
+      "error": null
+    }
+  ],
+  "condition1_satisfied": true,
+  "max_neg_R": -0.11534216560212984,
+  "n_valid_pairs": 6,
+  "n_violations": 0
+}

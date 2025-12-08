@@ -1,0 +1,112 @@
+{
+  "environment": "skg25",
+  "seed": 3,
+  "n_vars": 3,
+  "terc_vars": [
+    "key1",
+    "key2",
+    "key3"
+  ],
+  "state_type": "discrete",
+  "action_type": "discrete",
+  "H_A": 1.3766618715827876,
+  "n_samples": 10000,
+  "k_neighbors": 5,
+  "timestamp": "2025-12-08T14:47:57.978577",
+  "pairs": [
+    {
+      "s1_indices": [
+        0
+      ],
+      "s2_indices": [
+        1,
+        2
+      ],
+      "label": "{key1} vs {key2,key3}",
+      "neg_R": -0.3441789526603083,
+      "H_A": 1.3766618715827876,
+      "margin": 1.720840824243096,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1
+      ],
+      "s2_indices": [
+        0,
+        2
+      ],
+      "label": "{key2} vs {key1,key3}",
+      "neg_R": -0.33774369680782534,
+      "H_A": 1.3766618715827876,
+      "margin": 1.714405568390613,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        2
+      ],
+      "s2_indices": [
+        0,
+        1
+      ],
+      "label": "{key3} vs {key1,key2}",
+      "neg_R": -0.1583563810556603,
+      "H_A": 1.3766618715827876,
+      "margin": 1.535018252638448,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        1
+      ],
+      "s2_indices": [
+        2
+      ],
+      "label": "{key1,key2} vs {key3}",
+      "neg_R": -0.1583563810556603,
+      "H_A": 1.3766618715827876,
+      "margin": 1.535018252638448,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        2
+      ],
+      "s2_indices": [
+        1
+      ],
+      "label": "{key1,key3} vs {key2}",
+      "neg_R": -0.33774369680782534,
+      "H_A": 1.3766618715827876,
+      "margin": 1.714405568390613,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1,
+        2
+      ],
+      "s2_indices": [
+        0
+      ],
+      "label": "{key2,key3} vs {key1}",
+      "neg_R": -0.3441789526603083,
+      "H_A": 1.3766618715827876,
+      "margin": 1.720840824243096,
+      "assumption_satisfied": true,
+      "error": null
+    }
+  ],
+  "condition1_satisfied": true,
+  "max_neg_R": -0.1583563810556603,
+  "n_valid_pairs": 6,
+  "n_violations": 0
+}

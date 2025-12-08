@@ -1,0 +1,7561 @@
+{
+  "environment": "ipd_tf7t",
+  "seed": 0,
+  "n_vars": 6,
+  "terc_vars": [
+    "t-1",
+    "t-2",
+    "t-3",
+    "t-4",
+    "t-5",
+    "t-6"
+  ],
+  "state_type": "discrete",
+  "action_type": "discrete",
+  "H_A": 0.9987392651857419,
+  "n_samples": 10000,
+  "k_neighbors": 5,
+  "timestamp": "2025-12-08T14:49:56.043338",
+  "pairs": [
+    {
+      "s1_indices": [
+        0
+      ],
+      "s2_indices": [
+        1,
+        2
+      ],
+      "label": "{t-1} vs {t-2,t-3}",
+      "neg_R": -0.0008176546970912746,
+      "H_A": 0.9987392651857419,
+      "margin": 0.9995569198828331,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0
+      ],
+      "s2_indices": [
+        1,
+        3
+      ],
+      "label": "{t-1} vs {t-2,t-4}",
+      "neg_R": -0.0028319687842830454,
+      "H_A": 0.9987392651857419,
+      "margin": 1.001571233970025,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0
+      ],
+      "s2_indices": [
+        1,
+        4
+      ],
+      "label": "{t-1} vs {t-2,t-5}",
+      "neg_R": -0.0007495541141078199,
+      "H_A": 0.9987392651857419,
+      "margin": 0.9994888192998497,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0
+      ],
+      "s2_indices": [
+        1,
+        5
+      ],
+      "label": "{t-1} vs {t-2,t-6}",
+      "neg_R": -0.000582379711964176,
+      "H_A": 0.9987392651857419,
+      "margin": 0.999321644897706,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0
+      ],
+      "s2_indices": [
+        2,
+        3
+      ],
+      "label": "{t-1} vs {t-3,t-4}",
+      "neg_R": -0.0017736743211744788,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0005129395069163,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0
+      ],
+      "s2_indices": [
+        2,
+        4
+      ],
+      "label": "{t-1} vs {t-3,t-5}",
+      "neg_R": -0.001643672475319935,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0003829376610618,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0
+      ],
+      "s2_indices": [
+        2,
+        5
+      ],
+      "label": "{t-1} vs {t-3,t-6}",
+      "neg_R": -0.0015257937832036106,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0002650589689455,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0
+      ],
+      "s2_indices": [
+        3,
+        4
+      ],
+      "label": "{t-1} vs {t-4,t-5}",
+      "neg_R": -0.0017241921005064498,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0004634572862483,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0
+      ],
+      "s2_indices": [
+        3,
+        5
+      ],
+      "label": "{t-1} vs {t-4,t-6}",
+      "neg_R": -0.0014874415145453845,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0002267067002872,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0
+      ],
+      "s2_indices": [
+        4,
+        5
+      ],
+      "label": "{t-1} vs {t-5,t-6}",
+      "neg_R": -0.0014217057840766323,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0001609709698185,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1
+      ],
+      "s2_indices": [
+        0,
+        2
+      ],
+      "label": "{t-2} vs {t-1,t-3}",
+      "neg_R": -0.0005601981903862185,
+      "H_A": 0.9987392651857419,
+      "margin": 0.9992994633761281,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1
+      ],
+      "s2_indices": [
+        0,
+        3
+      ],
+      "label": "{t-2} vs {t-1,t-4}",
+      "neg_R": -0.002531367649988292,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0012706328357301,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1
+      ],
+      "s2_indices": [
+        0,
+        4
+      ],
+      "label": "{t-2} vs {t-1,t-5}",
+      "neg_R": -0.0007161105052559957,
+      "H_A": 0.9987392651857419,
+      "margin": 0.9994553756909978,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1
+      ],
+      "s2_indices": [
+        0,
+        5
+      ],
+      "label": "{t-2} vs {t-1,t-6}",
+      "neg_R": -0.0006235482651553159,
+      "H_A": 0.9987392651857419,
+      "margin": 0.9993628134508972,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1
+      ],
+      "s2_indices": [
+        2,
+        3
+      ],
+      "label": "{t-2} vs {t-3,t-4}",
+      "neg_R": -0.0013331983112931933,
+      "H_A": 0.9987392651857419,
+      "margin": 1.000072463497035,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1
+      ],
+      "s2_indices": [
+        2,
+        4
+      ],
+      "label": "{t-2} vs {t-3,t-5}",
+      "neg_R": -0.0011796290825139,
+      "H_A": 0.9987392651857419,
+      "margin": 0.9999188942682558,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1
+      ],
+      "s2_indices": [
+        2,
+        5
+      ],
+      "label": "{t-2} vs {t-3,t-6}",
+      "neg_R": -0.000891065221396703,
+      "H_A": 0.9987392651857419,
+      "margin": 0.9996303304071386,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1
+      ],
+      "s2_indices": [
+        3,
+        4
+      ],
+      "label": "{t-2} vs {t-4,t-5}",
+      "neg_R": -0.0013147851375634456,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0000540503233053,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1
+      ],
+      "s2_indices": [
+        3,
+        5
+      ],
+      "label": "{t-2} vs {t-4,t-6}",
+      "neg_R": -0.0013705467942897176,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0001098119800316,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1
+      ],
+      "s2_indices": [
+        4,
+        5
+      ],
+      "label": "{t-2} vs {t-5,t-6}",
+      "neg_R": -0.0011297170558164371,
+      "H_A": 0.9987392651857419,
+      "margin": 0.9998689822415583,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        2
+      ],
+      "s2_indices": [
+        0,
+        1
+      ],
+      "label": "{t-3} vs {t-1,t-2}",
+      "neg_R": -0.000996690697201208,
+      "H_A": 0.9987392651857419,
+      "margin": 0.9997359558829431,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        2
+      ],
+      "s2_indices": [
+        0,
+        3
+      ],
+      "label": "{t-3} vs {t-1,t-4}",
+      "neg_R": -0.001091842792105835,
+      "H_A": 0.9987392651857419,
+      "margin": 0.9998311079778477,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        2
+      ],
+      "s2_indices": [
+        0,
+        4
+      ],
+      "label": "{t-3} vs {t-1,t-5}",
+      "neg_R": -0.002140430935322568,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0008796961210644,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        2
+      ],
+      "s2_indices": [
+        0,
+        5
+      ],
+      "label": "{t-3} vs {t-1,t-6}",
+      "neg_R": -0.0018981405979967558,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0006374057837386,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        2
+      ],
+      "s2_indices": [
+        1,
+        3
+      ],
+      "label": "{t-3} vs {t-2,t-4}",
+      "neg_R": -0.0009519679165206352,
+      "H_A": 0.9987392651857419,
+      "margin": 0.9996912331022625,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        2
+      ],
+      "s2_indices": [
+        1,
+        4
+      ],
+      "label": "{t-3} vs {t-2,t-5}",
+      "neg_R": -0.0017098311513683573,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0004490963371102,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        2
+      ],
+      "s2_indices": [
+        1,
+        5
+      ],
+      "label": "{t-3} vs {t-2,t-6}",
+      "neg_R": -0.0012222434829982642,
+      "H_A": 0.9987392651857419,
+      "margin": 0.9999615086687401,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        2
+      ],
+      "s2_indices": [
+        3,
+        4
+      ],
+      "label": "{t-3} vs {t-4,t-5}",
+      "neg_R": -0.0015640091041950743,
+      "H_A": 0.9987392651857419,
+      "margin": 1.000303274289937,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        2
+      ],
+      "s2_indices": [
+        3,
+        5
+      ],
+      "label": "{t-3} vs {t-4,t-6}",
+      "neg_R": -0.0014560556198517371,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0001953208055936,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        2
+      ],
+      "s2_indices": [
+        4,
+        5
+      ],
+      "label": "{t-3} vs {t-5,t-6}",
+      "neg_R": -0.0020476577147057196,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0007869229004476,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        3
+      ],
+      "s2_indices": [
+        0,
+        1
+      ],
+      "label": "{t-4} vs {t-1,t-2}",
+      "neg_R": -0.003343525300151029,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0020827904858929,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        3
+      ],
+      "s2_indices": [
+        0,
+        2
+      ],
+      "label": "{t-4} vs {t-1,t-3}",
+      "neg_R": -0.0014675079354535825,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0002067731211954,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        3
+      ],
+      "s2_indices": [
+        0,
+        4
+      ],
+      "label": "{t-4} vs {t-1,t-5}",
+      "neg_R": -0.0017159743958390372,
+      "H_A": 0.9987392651857419,
+      "margin": 1.000455239581581,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        3
+      ],
+      "s2_indices": [
+        0,
+        5
+      ],
+      "label": "{t-4} vs {t-1,t-6}",
+      "neg_R": -0.0015266960820166098,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0002659612677585,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        3
+      ],
+      "s2_indices": [
+        1,
+        2
+      ],
+      "label": "{t-4} vs {t-2,t-3}",
+      "neg_R": -0.001284488432276909,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0000237536180188,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        3
+      ],
+      "s2_indices": [
+        1,
+        4
+      ],
+      "label": "{t-4} vs {t-2,t-5}",
+      "neg_R": -0.0013400110417483013,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0000792762274902,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        3
+      ],
+      "s2_indices": [
+        1,
+        5
+      ],
+      "label": "{t-4} vs {t-2,t-6}",
+      "neg_R": -0.001368632808570247,
+      "H_A": 0.9987392651857419,
+      "margin": 1.000107897994312,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        3
+      ],
+      "s2_indices": [
+        2,
+        4
+      ],
+      "label": "{t-4} vs {t-3,t-5}",
+      "neg_R": -0.0010590329395254727,
+      "H_A": 0.9987392651857419,
+      "margin": 0.9997982981252673,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        3
+      ],
+      "s2_indices": [
+        2,
+        5
+      ],
+      "label": "{t-4} vs {t-3,t-6}",
+      "neg_R": -0.001122963372529373,
+      "H_A": 0.9987392651857419,
+      "margin": 0.9998622285582712,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        3
+      ],
+      "s2_indices": [
+        4,
+        5
+      ],
+      "label": "{t-4} vs {t-5,t-6}",
+      "neg_R": -0.0009796688672074616,
+      "H_A": 0.9987392651857419,
+      "margin": 0.9997189340529493,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        4
+      ],
+      "s2_indices": [
+        0,
+        1
+      ],
+      "label": "{t-5} vs {t-1,t-2}",
+      "neg_R": -0.0010672947542449407,
+      "H_A": 0.9987392651857419,
+      "margin": 0.9998065599399868,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        4
+      ],
+      "s2_indices": [
+        0,
+        2
+      ],
+      "label": "{t-5} vs {t-1,t-3}",
+      "neg_R": -0.0020551226774965237,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0007943878632384,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        4
+      ],
+      "s2_indices": [
+        0,
+        3
+      ],
+      "label": "{t-5} vs {t-1,t-4}",
+      "neg_R": -0.0012550009946656893,
+      "H_A": 0.9987392651857419,
+      "margin": 0.9999942661804075,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        4
+      ],
+      "s2_indices": [
+        0,
+        5
+      ],
+      "label": "{t-5} vs {t-1,t-6}",
+      "neg_R": -0.0014453461558590064,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0001846113416009,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        4
+      ],
+      "s2_indices": [
+        1,
+        2
+      ],
+      "label": "{t-5} vs {t-2,t-3}",
+      "neg_R": -0.0018485357913955447,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0005878009771374,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        4
+      ],
+      "s2_indices": [
+        1,
+        3
+      ],
+      "label": "{t-5} vs {t-2,t-4}",
+      "neg_R": -0.0011461951660187708,
+      "H_A": 0.9987392651857419,
+      "margin": 0.9998854603517606,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        4
+      ],
+      "s2_indices": [
+        1,
+        5
+      ],
+      "label": "{t-5} vs {t-2,t-6}",
+      "neg_R": -0.0011121888744076713,
+      "H_A": 0.9987392651857419,
+      "margin": 0.9998514540601495,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        4
+      ],
+      "s2_indices": [
+        2,
+        3
+      ],
+      "label": "{t-5} vs {t-3,t-4}",
+      "neg_R": -0.0017766495274234018,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0005159147131653,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        4
+      ],
+      "s2_indices": [
+        2,
+        5
+      ],
+      "label": "{t-5} vs {t-3,t-6}",
+      "neg_R": -0.0016989512716962807,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0004382164574381,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        4
+      ],
+      "s2_indices": [
+        3,
+        5
+      ],
+      "label": "{t-5} vs {t-4,t-6}",
+      "neg_R": -0.0009640546715190546,
+      "H_A": 0.9987392651857419,
+      "margin": 0.9997033198572609,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        5
+      ],
+      "s2_indices": [
+        0,
+        1
+      ],
+      "label": "{t-6} vs {t-1,t-2}",
+      "neg_R": -0.0008334689419640107,
+      "H_A": 0.9987392651857419,
+      "margin": 0.9995727341277059,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        5
+      ],
+      "s2_indices": [
+        0,
+        2
+      ],
+      "label": "{t-6} vs {t-1,t-3}",
+      "neg_R": -0.001671568767989573,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0004108339537314,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        5
+      ],
+      "s2_indices": [
+        0,
+        3
+      ],
+      "label": "{t-6} vs {t-1,t-4}",
+      "neg_R": -0.0009244591086621234,
+      "H_A": 0.9987392651857419,
+      "margin": 0.999663724294404,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        5
+      ],
+      "s2_indices": [
+        0,
+        4
+      ],
+      "label": "{t-6} vs {t-1,t-5}",
+      "neg_R": -0.001304082583677868,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0000433477694197,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        5
+      ],
+      "s2_indices": [
+        1,
+        2
+      ],
+      "label": "{t-6} vs {t-2,t-3}",
+      "neg_R": -0.0012942967128881655,
+      "H_A": 0.9987392651857419,
+      "margin": 1.00003356189863,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        5
+      ],
+      "s2_indices": [
+        1,
+        3
+      ],
+      "label": "{t-6} vs {t-2,t-4}",
+      "neg_R": -0.001108165522701654,
+      "H_A": 0.9987392651857419,
+      "margin": 0.9998474307084435,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        5
+      ],
+      "s2_indices": [
+        1,
+        4
+      ],
+      "label": "{t-6} vs {t-2,t-5}",
+      "neg_R": -0.001045537464269497,
+      "H_A": 0.9987392651857419,
+      "margin": 0.9997848026500114,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        5
+      ],
+      "s2_indices": [
+        2,
+        3
+      ],
+      "label": "{t-6} vs {t-3,t-4}",
+      "neg_R": -0.0015749047430366758,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0003141699287785,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        5
+      ],
+      "s2_indices": [
+        2,
+        4
+      ],
+      "label": "{t-6} vs {t-3,t-5}",
+      "neg_R": -0.0014332760543052103,
+      "H_A": 0.9987392651857419,
+      "margin": 1.000172541240047,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        5
+      ],
+      "s2_indices": [
+        3,
+        4
+      ],
+      "label": "{t-6} vs {t-4,t-5}",
+      "neg_R": -0.0008702633714761099,
+      "H_A": 0.9987392651857419,
+      "margin": 0.999609528557218,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0
+      ],
+      "s2_indices": [
+        1,
+        2,
+        3
+      ],
+      "label": "{t-1} vs {t-2,t-3,t-4}",
+      "neg_R": -0.004206458673317481,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0029457238590593,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0
+      ],
+      "s2_indices": [
+        1,
+        2,
+        4
+      ],
+      "label": "{t-1} vs {t-2,t-3,t-5}",
+      "neg_R": -0.0025948603193097775,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0013341255050516,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0
+      ],
+      "s2_indices": [
+        1,
+        2,
+        5
+      ],
+      "label": "{t-1} vs {t-2,t-3,t-6}",
+      "neg_R": -0.0022511073365309997,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0009903725222729,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0
+      ],
+      "s2_indices": [
+        1,
+        3,
+        4
+      ],
+      "label": "{t-1} vs {t-2,t-4,t-5}",
+      "neg_R": -0.0047039103720485365,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0034431755577904,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0
+      ],
+      "s2_indices": [
+        1,
+        3,
+        5
+      ],
+      "label": "{t-1} vs {t-2,t-4,t-6}",
+      "neg_R": -0.0043151579317179944,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0030544231174598,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0
+      ],
+      "s2_indices": [
+        1,
+        4,
+        5
+      ],
+      "label": "{t-1} vs {t-2,t-5,t-6}",
+      "neg_R": -0.0020461559597695356,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0007854211455114,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0
+      ],
+      "s2_indices": [
+        2,
+        3,
+        4
+      ],
+      "label": "{t-1} vs {t-3,t-4,t-5}",
+      "neg_R": -0.004237272686135274,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0029765378718771,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0
+      ],
+      "s2_indices": [
+        2,
+        3,
+        5
+      ],
+      "label": "{t-1} vs {t-3,t-4,t-6}",
+      "neg_R": -0.0034522826892078307,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0021915478749497,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0
+      ],
+      "s2_indices": [
+        2,
+        4,
+        5
+      ],
+      "label": "{t-1} vs {t-3,t-5,t-6}",
+      "neg_R": -0.004406271190862121,
+      "H_A": 0.9987392651857419,
+      "margin": 1.003145536376604,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0
+      ],
+      "s2_indices": [
+        3,
+        4,
+        5
+      ],
+      "label": "{t-1} vs {t-4,t-5,t-6}",
+      "neg_R": -0.0032950907531925644,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0020343559389344,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1
+      ],
+      "s2_indices": [
+        0,
+        2,
+        3
+      ],
+      "label": "{t-2} vs {t-1,t-3,t-4}",
+      "neg_R": -0.003765982663437084,
+      "H_A": 0.9987392651857419,
+      "margin": 1.002505247849179,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1
+      ],
+      "s2_indices": [
+        0,
+        2,
+        4
+      ],
+      "label": "{t-2} vs {t-1,t-3,t-5}",
+      "neg_R": -0.0021308169265028543,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0008700821122447,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1
+      ],
+      "s2_indices": [
+        0,
+        2,
+        5
+      ],
+      "label": "{t-2} vs {t-1,t-3,t-6}",
+      "neg_R": -0.0016163787747249803,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0003556439604668,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1
+      ],
+      "s2_indices": [
+        0,
+        3,
+        4
+      ],
+      "label": "{t-2} vs {t-1,t-4,t-5}",
+      "neg_R": -0.0042945034091064205,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0030337685948483,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1
+      ],
+      "s2_indices": [
+        0,
+        3,
+        5
+      ],
+      "label": "{t-2} vs {t-1,t-4,t-6}",
+      "neg_R": -0.0041982632114623275,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0029375283972042,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1
+      ],
+      "s2_indices": [
+        0,
+        4,
+        5
+      ],
+      "label": "{t-2} vs {t-1,t-5,t-6}",
+      "neg_R": -0.0017541672315084522,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0004934324172503,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1
+      ],
+      "s2_indices": [
+        2,
+        3,
+        4
+      ],
+      "label": "{t-2} vs {t-3,t-4,t-5}",
+      "neg_R": -0.0029834242630777386,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0017226894488196,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1
+      ],
+      "s2_indices": [
+        2,
+        3,
+        5
+      ],
+      "label": "{t-2} vs {t-3,t-4,t-6}",
+      "neg_R": -0.0028502063936246547,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0015894715793665,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1
+      ],
+      "s2_indices": [
+        2,
+        4,
+        5
+      ],
+      "label": "{t-2} vs {t-3,t-5,t-6}",
+      "neg_R": -0.0026609824721555153,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0014002476578974,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1
+      ],
+      "s2_indices": [
+        3,
+        4,
+        5
+      ],
+      "label": "{t-2} vs {t-4,t-5,t-6}",
+      "neg_R": -0.0029632903808078925,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0017025555665497,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        2
+      ],
+      "s2_indices": [
+        0,
+        1,
+        3
+      ],
+      "label": "{t-3} vs {t-1,t-2,t-4}",
+      "neg_R": -0.002326457805555071,
+      "H_A": 0.9987392651857419,
+      "margin": 1.001065722991297,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        2
+      ],
+      "s2_indices": [
+        0,
+        1,
+        4
+      ],
+      "label": "{t-3} vs {t-1,t-2,t-5}",
+      "neg_R": -0.003555137356570315,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0022944025423122,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        2
+      ],
+      "s2_indices": [
+        0,
+        1,
+        5
+      ],
+      "label": "{t-3} vs {t-1,t-2,t-6}",
+      "neg_R": -0.002890971107565976,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0016302362933078,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        2
+      ],
+      "s2_indices": [
+        0,
+        3,
+        4
+      ],
+      "label": "{t-3} vs {t-1,t-4,t-5}",
+      "neg_R": -0.004077089689823898,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0028163548755658,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        2
+      ],
+      "s2_indices": [
+        0,
+        3,
+        5
+      ],
+      "label": "{t-3} vs {t-1,t-4,t-6}",
+      "neg_R": -0.0034208967945141833,
+      "H_A": 0.9987392651857419,
+      "margin": 1.002160161980256,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        2
+      ],
+      "s2_indices": [
+        0,
+        4,
+        5
+      ],
+      "label": "{t-3} vs {t-1,t-5,t-6}",
+      "neg_R": -0.00503222312149032,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0037714883072322,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        2
+      ],
+      "s2_indices": [
+        1,
+        3,
+        4
+      ],
+      "label": "{t-3} vs {t-2,t-4,t-5}",
+      "neg_R": -0.0032326482297102554,
+      "H_A": 0.9987392651857419,
+      "margin": 1.001971913415452,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        2
+      ],
+      "s2_indices": [
+        1,
+        3,
+        5
+      ],
+      "label": "{t-3} vs {t-2,t-4,t-6}",
+      "neg_R": -0.0029357152191884506,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0016749804049303,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        2
+      ],
+      "s2_indices": [
+        1,
+        4,
+        5
+      ],
+      "label": "{t-3} vs {t-2,t-5,t-6}",
+      "neg_R": -0.0035789231310447978,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0023181883167867,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        2
+      ],
+      "s2_indices": [
+        3,
+        4,
+        5
+      ],
+      "label": "{t-3} vs {t-4,t-5,t-6}",
+      "neg_R": -0.003614041539614865,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0023533067253567,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        3
+      ],
+      "s2_indices": [
+        0,
+        1,
+        2
+      ],
+      "label": "{t-4} vs {t-1,t-2,t-3}",
+      "neg_R": -0.004673292408504004,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0034125575942459,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        3
+      ],
+      "s2_indices": [
+        0,
+        1,
+        4
+      ],
+      "label": "{t-4} vs {t-1,t-2,t-5}",
+      "neg_R": -0.005294367299689018,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0040336324854309,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        3
+      ],
+      "s2_indices": [
+        0,
+        1,
+        5
+      ],
+      "label": "{t-4} vs {t-1,t-2,t-6}",
+      "neg_R": -0.005101411028323621,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0038406762140655,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        3
+      ],
+      "s2_indices": [
+        0,
+        2,
+        4
+      ],
+      "label": "{t-4} vs {t-1,t-3,t-5}",
+      "neg_R": -0.003652633150342588,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0023918983360844,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        3
+      ],
+      "s2_indices": [
+        0,
+        2,
+        5
+      ],
+      "label": "{t-4} vs {t-1,t-3,t-6}",
+      "neg_R": -0.0030494522785344813,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0017887174642763,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        3
+      ],
+      "s2_indices": [
+        0,
+        4,
+        5
+      ],
+      "label": "{t-4} vs {t-1,t-5,t-6}",
+      "neg_R": -0.0028530538363233937,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0015923190220652,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        3
+      ],
+      "s2_indices": [
+        1,
+        2,
+        4
+      ],
+      "label": "{t-4} vs {t-2,t-3,t-5}",
+      "neg_R": -0.0028628281200901995,
+      "H_A": 0.9987392651857419,
+      "margin": 1.001602093305832,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        3
+      ],
+      "s2_indices": [
+        1,
+        2,
+        5
+      ],
+      "label": "{t-4} vs {t-2,t-3,t-6}",
+      "neg_R": -0.003082104544759101,
+      "H_A": 0.9987392651857419,
+      "margin": 1.001821369730501,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        3
+      ],
+      "s2_indices": [
+        1,
+        4,
+        5
+      ],
+      "label": "{t-4} vs {t-2,t-5,t-6}",
+      "neg_R": -0.002813242192198917,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0015525073779408,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        3
+      ],
+      "s2_indices": [
+        2,
+        4,
+        5
+      ],
+      "label": "{t-4} vs {t-3,t-5,t-6}",
+      "neg_R": -0.002546052692116607,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0012853178778585,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        4
+      ],
+      "s2_indices": [
+        0,
+        1,
+        2
+      ],
+      "label": "{t-5} vs {t-1,t-2,t-3}",
+      "neg_R": -0.0036257414136140476,
+      "H_A": 0.9987392651857419,
+      "margin": 1.002365006599356,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        4
+      ],
+      "s2_indices": [
+        0,
+        1,
+        3
+      ],
+      "label": "{t-5} vs {t-1,t-2,t-4}",
+      "neg_R": -0.0030181367537838177,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0017574019395257,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        4
+      ],
+      "s2_indices": [
+        0,
+        1,
+        5
+      ],
+      "label": "{t-5} vs {t-1,t-2,t-6}",
+      "neg_R": -0.0025759651222125868,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0013152303079544,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        4
+      ],
+      "s2_indices": [
+        0,
+        2,
+        3
+      ],
+      "label": "{t-5} vs {t-1,t-3,t-4}",
+      "neg_R": -0.004240247892385085,
+      "H_A": 0.9987392651857419,
+      "margin": 1.002979513078127,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        4
+      ],
+      "s2_indices": [
+        0,
+        2,
+        5
+      ],
+      "label": "{t-5} vs {t-1,t-3,t-6}",
+      "neg_R": -0.004579428679353459,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0033186938650953,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        4
+      ],
+      "s2_indices": [
+        0,
+        3,
+        5
+      ],
+      "label": "{t-5} vs {t-1,t-4,t-6}",
+      "neg_R": -0.0027717039101653462,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0015109690959072,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        4
+      ],
+      "s2_indices": [
+        1,
+        2,
+        3
+      ],
+      "label": "{t-5} vs {t-2,t-3,t-4}",
+      "neg_R": -0.0034268754792097234,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0021661406649516,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        4
+      ],
+      "s2_indices": [
+        1,
+        2,
+        5
+      ],
+      "label": "{t-5} vs {t-2,t-3,t-6}",
+      "neg_R": -0.0034688685224537608,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0022081337081956,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        4
+      ],
+      "s2_indices": [
+        1,
+        3,
+        5
+      ],
+      "label": "{t-5} vs {t-2,t-4,t-6}",
+      "neg_R": -0.0025567982580372295,
+      "H_A": 0.9987392651857419,
+      "margin": 1.001296063443779,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        4
+      ],
+      "s2_indices": [
+        2,
+        3,
+        5
+      ],
+      "label": "{t-5} vs {t-3,t-4,t-6}",
+      "neg_R": -0.0031220405912821825,
+      "H_A": 0.9987392651857419,
+      "margin": 1.001861305777024,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        5
+      ],
+      "s2_indices": [
+        0,
+        1,
+        2
+      ],
+      "label": "{t-6} vs {t-1,t-2,t-3}",
+      "neg_R": -0.0027277493523278906,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0014670145380697,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        5
+      ],
+      "s2_indices": [
+        0,
+        1,
+        3
+      ],
+      "label": "{t-6} vs {t-1,t-2,t-4}",
+      "neg_R": -0.002591354670136603,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0013306198558785,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        5
+      ],
+      "s2_indices": [
+        0,
+        1,
+        4
+      ],
+      "label": "{t-6} vs {t-1,t-2,t-5}",
+      "neg_R": -0.0023421393099307686,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0010814044956726,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        5
+      ],
+      "s2_indices": [
+        0,
+        2,
+        3
+      ],
+      "label": "{t-6} vs {t-1,t-3,t-4}",
+      "neg_R": -0.003253513111070472,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0019927782968123,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        5
+      ],
+      "s2_indices": [
+        0,
+        2,
+        4
+      ],
+      "label": "{t-6} vs {t-1,t-3,t-5}",
+      "neg_R": -0.004195874769846064,
+      "H_A": 0.9987392651857419,
+      "margin": 1.002935139955588,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        5
+      ],
+      "s2_indices": [
+        0,
+        3,
+        4
+      ],
+      "label": "{t-6} vs {t-1,t-4,t-5}",
+      "neg_R": -0.0024411620241622245,
+      "H_A": 0.9987392651857419,
+      "margin": 1.001180427209904,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        5
+      ],
+      "s2_indices": [
+        1,
+        2,
+        3
+      ],
+      "label": "{t-6} vs {t-2,t-3,t-4}",
+      "neg_R": -0.0030919128253694694,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0018311780111113,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        5
+      ],
+      "s2_indices": [
+        1,
+        2,
+        4
+      ],
+      "label": "{t-6} vs {t-2,t-3,t-5}",
+      "neg_R": -0.0029146294439454934,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0016538946296873,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        5
+      ],
+      "s2_indices": [
+        1,
+        3,
+        4
+      ],
+      "label": "{t-6} vs {t-2,t-4,t-5}",
+      "neg_R": -0.002518768614720557,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0012580338004624,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        5
+      ],
+      "s2_indices": [
+        2,
+        3,
+        4
+      ],
+      "label": "{t-6} vs {t-3,t-4,t-5}",
+      "neg_R": -0.0029202958068959006,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0016595609926378,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0
+      ],
+      "s2_indices": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "label": "{t-1} vs {t-2,t-3,t-4,t-5}",
+      "neg_R": -0.011194925944483458,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0099341911302253,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0
+      ],
+      "s2_indices": [
+        1,
+        2,
+        3,
+        5
+      ],
+      "label": "{t-1} vs {t-2,t-3,t-4,t-6}",
+      "neg_R": -0.010872315020002965,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0096115802057448,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0
+      ],
+      "s2_indices": [
+        1,
+        2,
+        4,
+        5
+      ],
+      "label": "{t-1} vs {t-2,t-3,t-5,t-6}",
+      "neg_R": -0.00864247955704922,
+      "H_A": 0.9987392651857419,
+      "margin": 1.007381744742791,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0
+      ],
+      "s2_indices": [
+        1,
+        3,
+        4,
+        5
+      ],
+      "label": "{t-1} vs {t-2,t-4,t-5,t-6}",
+      "neg_R": -0.010254357795654201,
+      "H_A": 0.9987392651857419,
+      "margin": 1.008993622981396,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0
+      ],
+      "s2_indices": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "label": "{t-1} vs {t-3,t-4,t-5,t-6}",
+      "neg_R": -0.01048905710266812,
+      "H_A": 0.9987392651857419,
+      "margin": 1.00922832228841,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1
+      ],
+      "s2_indices": [
+        0,
+        2,
+        3,
+        4
+      ],
+      "label": "{t-2} vs {t-1,t-3,t-4,t-5}",
+      "neg_R": -0.009941077521425923,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0086803427071678,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1
+      ],
+      "s2_indices": [
+        0,
+        2,
+        3,
+        5
+      ],
+      "label": "{t-2} vs {t-1,t-3,t-4,t-6}",
+      "neg_R": -0.010270238724419789,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0090095039101616,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1
+      ],
+      "s2_indices": [
+        0,
+        2,
+        4,
+        5
+      ],
+      "label": "{t-2} vs {t-1,t-3,t-5,t-6}",
+      "neg_R": -0.006897190838342615,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0056364560240845,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1
+      ],
+      "s2_indices": [
+        0,
+        3,
+        4,
+        5
+      ],
+      "label": "{t-2} vs {t-1,t-4,t-5,t-6}",
+      "neg_R": -0.009922557423269529,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0086618226090114,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1
+      ],
+      "s2_indices": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "label": "{t-2} vs {t-3,t-4,t-5,t-6}",
+      "neg_R": -0.00966682901012983,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0084060941958717,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        2
+      ],
+      "s2_indices": [
+        0,
+        1,
+        3,
+        4
+      ],
+      "label": "{t-3} vs {t-1,t-2,t-4,t-5}",
+      "neg_R": -0.009723663802144289,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0084629289878861,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        2
+      ],
+      "s2_indices": [
+        0,
+        1,
+        3,
+        5
+      ],
+      "label": "{t-3} vs {t-1,t-2,t-4,t-6}",
+      "neg_R": -0.009492872307471645,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0082321374932135,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        2
+      ],
+      "s2_indices": [
+        0,
+        1,
+        4,
+        5
+      ],
+      "label": "{t-3} vs {t-1,t-2,t-5,t-6}",
+      "neg_R": -0.010175246728324483,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0089145119140663,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        2
+      ],
+      "s2_indices": [
+        0,
+        3,
+        4,
+        5
+      ],
+      "label": "{t-3} vs {t-1,t-4,t-5,t-6}",
+      "neg_R": -0.01080800788909042,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0095472730748323,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        2
+      ],
+      "s2_indices": [
+        1,
+        3,
+        4,
+        5
+      ],
+      "label": "{t-3} vs {t-2,t-4,t-5,t-6}",
+      "neg_R": -0.010317580168936802,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0090568453546787,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        3
+      ],
+      "s2_indices": [
+        0,
+        1,
+        2,
+        4
+      ],
+      "label": "{t-4} vs {t-1,t-2,t-3,t-5}",
+      "neg_R": -0.011462893745264768,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0102021589310066,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        3
+      ],
+      "s2_indices": [
+        0,
+        1,
+        2,
+        5
+      ],
+      "label": "{t-4} vs {t-1,t-2,t-3,t-6}",
+      "neg_R": -0.011703312228230178,
+      "H_A": 0.9987392651857419,
+      "margin": 1.010442577413972,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        3
+      ],
+      "s2_indices": [
+        0,
+        1,
+        4,
+        5
+      ],
+      "label": "{t-4} vs {t-1,t-2,t-5,t-6}",
+      "neg_R": -0.011021444028083582,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0097607092138254,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        3
+      ],
+      "s2_indices": [
+        0,
+        2,
+        4,
+        5
+      ],
+      "label": "{t-4} vs {t-1,t-3,t-5,t-6}",
+      "neg_R": -0.008628838603922606,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0073681037896645,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        3
+      ],
+      "s2_indices": [
+        1,
+        2,
+        4,
+        5
+      ],
+      "label": "{t-4} vs {t-2,t-3,t-5,t-6}",
+      "neg_R": -0.009551899230090921,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0082911644158328,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        4
+      ],
+      "s2_indices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "label": "{t-5} vs {t-1,t-2,t-3,t-4}",
+      "neg_R": -0.010415342750373924,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0091546079361158,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        4
+      ],
+      "s2_indices": [
+        0,
+        1,
+        2,
+        5
+      ],
+      "label": "{t-5} vs {t-1,t-2,t-3,t-6}",
+      "neg_R": -0.009860240742971094,
+      "H_A": 0.9987392651857419,
+      "margin": 1.008599505928713,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        4
+      ],
+      "s2_indices": [
+        0,
+        1,
+        3,
+        5
+      ],
+      "label": "{t-5} vs {t-1,t-2,t-4,t-6}",
+      "neg_R": -0.008495998121974324,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0072352633077162,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        4
+      ],
+      "s2_indices": [
+        0,
+        2,
+        3,
+        5
+      ],
+      "label": "{t-5} vs {t-1,t-3,t-4,t-6}",
+      "neg_R": -0.010158815004742472,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0088980801904843,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        4
+      ],
+      "s2_indices": [
+        1,
+        2,
+        3,
+        5
+      ],
+      "label": "{t-5} vs {t-2,t-3,t-4,t-6}",
+      "neg_R": -0.00993866320778558,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0086779283935274,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        5
+      ],
+      "s2_indices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "label": "{t-6} vs {t-1,t-2,t-3,t-4}",
+      "neg_R": -0.009757769172054065,
+      "H_A": 0.9987392651857419,
+      "margin": 1.008497034357796,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        5
+      ],
+      "s2_indices": [
+        0,
+        1,
+        2,
+        4
+      ],
+      "label": "{t-6} vs {t-1,t-2,t-3,t-5}",
+      "neg_R": -0.008962248681684937,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0077015138674268,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        5
+      ],
+      "s2_indices": [
+        0,
+        1,
+        3,
+        4
+      ],
+      "label": "{t-6} vs {t-1,t-2,t-4,t-5}",
+      "neg_R": -0.00806921603832711,
+      "H_A": 0.9987392651857419,
+      "margin": 1.006808481224069,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        5
+      ],
+      "s2_indices": [
+        0,
+        2,
+        3,
+        4
+      ],
+      "label": "{t-6} vs {t-1,t-3,t-4,t-5}",
+      "neg_R": -0.009172080223428747,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0079113454091706,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        5
+      ],
+      "s2_indices": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "label": "{t-6} vs {t-2,t-3,t-4,t-5}",
+      "neg_R": -0.009603700553946215,
+      "H_A": 0.9987392651857419,
+      "margin": 1.008342965739688,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0
+      ],
+      "s2_indices": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "label": "{t-1} vs {t-2,t-3,t-4,t-5,t-6}",
+      "neg_R": -0.03792322088568412,
+      "H_A": 0.9987392651857419,
+      "margin": 1.036662486071426,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1
+      ],
+      "s2_indices": [
+        0,
+        2,
+        3,
+        4,
+        5
+      ],
+      "label": "{t-2} vs {t-1,t-3,t-4,t-5,t-6}",
+      "neg_R": -0.037100992793145826,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0358402579788877,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        2
+      ],
+      "s2_indices": [
+        0,
+        1,
+        3,
+        4,
+        5
+      ],
+      "label": "{t-3} vs {t-1,t-2,t-4,t-5,t-6}",
+      "neg_R": -0.03798644325896672,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0367257084447086,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        3
+      ],
+      "s2_indices": [
+        0,
+        1,
+        2,
+        4,
+        5
+      ],
+      "label": "{t-4} vs {t-1,t-2,t-3,t-5,t-6}",
+      "neg_R": -0.03883264055872493,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0375719057444668,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        4
+      ],
+      "s2_indices": [
+        0,
+        1,
+        2,
+        3,
+        5
+      ],
+      "label": "{t-5} vs {t-1,t-2,t-3,t-4,t-6}",
+      "neg_R": -0.036989569073470285,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0357288342592121,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        5
+      ],
+      "s2_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "label": "{t-6} vs {t-1,t-2,t-3,t-4,t-5}",
+      "neg_R": -0.03633199549514865,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0350712606808905,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        1
+      ],
+      "s2_indices": [
+        2
+      ],
+      "label": "{t-1,t-2} vs {t-3}",
+      "neg_R": -0.000996690697201208,
+      "H_A": 0.9987392651857419,
+      "margin": 0.9997359558829431,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        1
+      ],
+      "s2_indices": [
+        3
+      ],
+      "label": "{t-1,t-2} vs {t-4}",
+      "neg_R": -0.003343525300150141,
+      "H_A": 0.9987392651857419,
+      "margin": 1.002082790485892,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        1
+      ],
+      "s2_indices": [
+        4
+      ],
+      "label": "{t-1,t-2} vs {t-5}",
+      "neg_R": -0.0010672947542449407,
+      "H_A": 0.9987392651857419,
+      "margin": 0.9998065599399868,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        1
+      ],
+      "s2_indices": [
+        5
+      ],
+      "label": "{t-1,t-2} vs {t-6}",
+      "neg_R": -0.0008334689419631225,
+      "H_A": 0.9987392651857419,
+      "margin": 0.999572734127705,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        2
+      ],
+      "s2_indices": [
+        1
+      ],
+      "label": "{t-1,t-3} vs {t-2}",
+      "neg_R": -0.0005601981903862185,
+      "H_A": 0.9987392651857419,
+      "margin": 0.9992994633761281,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        2
+      ],
+      "s2_indices": [
+        3
+      ],
+      "label": "{t-1,t-3} vs {t-4}",
+      "neg_R": -0.0014675079354531384,
+      "H_A": 0.9987392651857419,
+      "margin": 1.000206773121195,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        2
+      ],
+      "s2_indices": [
+        4
+      ],
+      "label": "{t-1,t-3} vs {t-5}",
+      "neg_R": -0.0020551226774965237,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0007943878632384,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        2
+      ],
+      "s2_indices": [
+        5
+      ],
+      "label": "{t-1,t-3} vs {t-6}",
+      "neg_R": -0.001671568767989129,
+      "H_A": 0.9987392651857419,
+      "margin": 1.000410833953731,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        3
+      ],
+      "s2_indices": [
+        1
+      ],
+      "label": "{t-1,t-4} vs {t-2}",
+      "neg_R": -0.002531367649988292,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0012706328357301,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        3
+      ],
+      "s2_indices": [
+        2
+      ],
+      "label": "{t-1,t-4} vs {t-3}",
+      "neg_R": -0.001091842792105835,
+      "H_A": 0.9987392651857419,
+      "margin": 0.9998311079778477,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        3
+      ],
+      "s2_indices": [
+        4
+      ],
+      "label": "{t-1,t-4} vs {t-5}",
+      "neg_R": -0.0012550009946661334,
+      "H_A": 0.9987392651857419,
+      "margin": 0.999994266180408,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        3
+      ],
+      "s2_indices": [
+        5
+      ],
+      "label": "{t-1,t-4} vs {t-6}",
+      "neg_R": -0.0009244591086621234,
+      "H_A": 0.9987392651857419,
+      "margin": 0.999663724294404,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        4
+      ],
+      "s2_indices": [
+        1
+      ],
+      "label": "{t-1,t-5} vs {t-2}",
+      "neg_R": -0.0007161105052559957,
+      "H_A": 0.9987392651857419,
+      "margin": 0.9994553756909978,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        4
+      ],
+      "s2_indices": [
+        2
+      ],
+      "label": "{t-1,t-5} vs {t-3}",
+      "neg_R": -0.002140430935322568,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0008796961210644,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        4
+      ],
+      "s2_indices": [
+        3
+      ],
+      "label": "{t-1,t-5} vs {t-4}",
+      "neg_R": -0.0017159743958390372,
+      "H_A": 0.9987392651857419,
+      "margin": 1.000455239581581,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        4
+      ],
+      "s2_indices": [
+        5
+      ],
+      "label": "{t-1,t-5} vs {t-6}",
+      "neg_R": -0.001304082583678312,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0000433477694202,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        5
+      ],
+      "s2_indices": [
+        1
+      ],
+      "label": "{t-1,t-6} vs {t-2}",
+      "neg_R": -0.0006235482651553159,
+      "H_A": 0.9987392651857419,
+      "margin": 0.9993628134508972,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        5
+      ],
+      "s2_indices": [
+        2
+      ],
+      "label": "{t-1,t-6} vs {t-3}",
+      "neg_R": -0.0018981405979967558,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0006374057837386,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        5
+      ],
+      "s2_indices": [
+        3
+      ],
+      "label": "{t-1,t-6} vs {t-4}",
+      "neg_R": -0.0015266960820166098,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0002659612677585,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        5
+      ],
+      "s2_indices": [
+        4
+      ],
+      "label": "{t-1,t-6} vs {t-5}",
+      "neg_R": -0.0014453461558590064,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0001846113416009,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1,
+        2
+      ],
+      "s2_indices": [
+        0
+      ],
+      "label": "{t-2,t-3} vs {t-1}",
+      "neg_R": -0.0008176546970912746,
+      "H_A": 0.9987392651857419,
+      "margin": 0.9995569198828331,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1,
+        2
+      ],
+      "s2_indices": [
+        3
+      ],
+      "label": "{t-2,t-3} vs {t-4}",
+      "neg_R": -0.001284488432276909,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0000237536180188,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1,
+        2
+      ],
+      "s2_indices": [
+        4
+      ],
+      "label": "{t-2,t-3} vs {t-5}",
+      "neg_R": -0.0018485357913955447,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0005878009771374,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1,
+        2
+      ],
+      "s2_indices": [
+        5
+      ],
+      "label": "{t-2,t-3} vs {t-6}",
+      "neg_R": -0.0012942967128872773,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0000335618986291,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1,
+        3
+      ],
+      "s2_indices": [
+        0
+      ],
+      "label": "{t-2,t-4} vs {t-1}",
+      "neg_R": -0.0028319687842830454,
+      "H_A": 0.9987392651857419,
+      "margin": 1.001571233970025,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1,
+        3
+      ],
+      "s2_indices": [
+        2
+      ],
+      "label": "{t-2,t-4} vs {t-3}",
+      "neg_R": -0.0009519679165201911,
+      "H_A": 0.9987392651857419,
+      "margin": 0.999691233102262,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1,
+        3
+      ],
+      "s2_indices": [
+        4
+      ],
+      "label": "{t-2,t-4} vs {t-5}",
+      "neg_R": -0.0011461951660183267,
+      "H_A": 0.9987392651857419,
+      "margin": 0.9998854603517602,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1,
+        3
+      ],
+      "s2_indices": [
+        5
+      ],
+      "label": "{t-2,t-4} vs {t-6}",
+      "neg_R": -0.001108165522701654,
+      "H_A": 0.9987392651857419,
+      "margin": 0.9998474307084435,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1,
+        4
+      ],
+      "s2_indices": [
+        0
+      ],
+      "label": "{t-2,t-5} vs {t-1}",
+      "neg_R": -0.0007495541141073758,
+      "H_A": 0.9987392651857419,
+      "margin": 0.9994888192998492,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1,
+        4
+      ],
+      "s2_indices": [
+        2
+      ],
+      "label": "{t-2,t-5} vs {t-3}",
+      "neg_R": -0.0017098311513683573,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0004490963371102,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1,
+        4
+      ],
+      "s2_indices": [
+        3
+      ],
+      "label": "{t-2,t-5} vs {t-4}",
+      "neg_R": -0.0013400110417483013,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0000792762274902,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1,
+        4
+      ],
+      "s2_indices": [
+        5
+      ],
+      "label": "{t-2,t-5} vs {t-6}",
+      "neg_R": -0.001045537464269941,
+      "H_A": 0.9987392651857419,
+      "margin": 0.9997848026500118,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1,
+        5
+      ],
+      "s2_indices": [
+        0
+      ],
+      "label": "{t-2,t-6} vs {t-1}",
+      "neg_R": -0.000582379711964176,
+      "H_A": 0.9987392651857419,
+      "margin": 0.999321644897706,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1,
+        5
+      ],
+      "s2_indices": [
+        2
+      ],
+      "label": "{t-2,t-6} vs {t-3}",
+      "neg_R": -0.0012222434829982642,
+      "H_A": 0.9987392651857419,
+      "margin": 0.9999615086687401,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1,
+        5
+      ],
+      "s2_indices": [
+        3
+      ],
+      "label": "{t-2,t-6} vs {t-4}",
+      "neg_R": -0.001368632808569803,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0001078979943117,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1,
+        5
+      ],
+      "s2_indices": [
+        4
+      ],
+      "label": "{t-2,t-6} vs {t-5}",
+      "neg_R": -0.0011121888744076713,
+      "H_A": 0.9987392651857419,
+      "margin": 0.9998514540601495,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        2,
+        3
+      ],
+      "s2_indices": [
+        0
+      ],
+      "label": "{t-3,t-4} vs {t-1}",
+      "neg_R": -0.0017736743211744788,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0005129395069163,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        2,
+        3
+      ],
+      "s2_indices": [
+        1
+      ],
+      "label": "{t-3,t-4} vs {t-2}",
+      "neg_R": -0.0013331983112936374,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0000724634970355,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        2,
+        3
+      ],
+      "s2_indices": [
+        4
+      ],
+      "label": "{t-3,t-4} vs {t-5}",
+      "neg_R": -0.0017766495274234018,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0005159147131653,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        2,
+        3
+      ],
+      "s2_indices": [
+        5
+      ],
+      "label": "{t-3,t-4} vs {t-6}",
+      "neg_R": -0.00157490474303712,
+      "H_A": 0.9987392651857419,
+      "margin": 1.000314169928779,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        2,
+        4
+      ],
+      "s2_indices": [
+        0
+      ],
+      "label": "{t-3,t-5} vs {t-1}",
+      "neg_R": -0.001643672475320379,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0003829376610622,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        2,
+        4
+      ],
+      "s2_indices": [
+        1
+      ],
+      "label": "{t-3,t-5} vs {t-2}",
+      "neg_R": -0.0011796290825139,
+      "H_A": 0.9987392651857419,
+      "margin": 0.9999188942682558,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        2,
+        4
+      ],
+      "s2_indices": [
+        3
+      ],
+      "label": "{t-3,t-5} vs {t-4}",
+      "neg_R": -0.0010590329395254727,
+      "H_A": 0.9987392651857419,
+      "margin": 0.9997982981252673,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        2,
+        4
+      ],
+      "s2_indices": [
+        5
+      ],
+      "label": "{t-3,t-5} vs {t-6}",
+      "neg_R": -0.0014332760543047662,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0001725412400466,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        2,
+        5
+      ],
+      "s2_indices": [
+        0
+      ],
+      "label": "{t-3,t-6} vs {t-1}",
+      "neg_R": -0.0015257937832044988,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0002650589689464,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        2,
+        5
+      ],
+      "s2_indices": [
+        1
+      ],
+      "label": "{t-3,t-6} vs {t-2}",
+      "neg_R": -0.000891065221396703,
+      "H_A": 0.9987392651857419,
+      "margin": 0.9996303304071386,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        2,
+        5
+      ],
+      "s2_indices": [
+        3
+      ],
+      "label": "{t-3,t-6} vs {t-4}",
+      "neg_R": -0.0011229633725302612,
+      "H_A": 0.9987392651857419,
+      "margin": 0.9998622285582721,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        2,
+        5
+      ],
+      "s2_indices": [
+        4
+      ],
+      "label": "{t-3,t-6} vs {t-5}",
+      "neg_R": -0.0016989512716962807,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0004382164574381,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        3,
+        4
+      ],
+      "s2_indices": [
+        0
+      ],
+      "label": "{t-4,t-5} vs {t-1}",
+      "neg_R": -0.0017241921005060057,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0004634572862479,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        3,
+        4
+      ],
+      "s2_indices": [
+        1
+      ],
+      "label": "{t-4,t-5} vs {t-2}",
+      "neg_R": -0.0013147851375634456,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0000540503233053,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        3,
+        4
+      ],
+      "s2_indices": [
+        2
+      ],
+      "label": "{t-4,t-5} vs {t-3}",
+      "neg_R": -0.0015640091041950743,
+      "H_A": 0.9987392651857419,
+      "margin": 1.000303274289937,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        3,
+        4
+      ],
+      "s2_indices": [
+        5
+      ],
+      "label": "{t-4,t-5} vs {t-6}",
+      "neg_R": -0.0008702633714761099,
+      "H_A": 0.9987392651857419,
+      "margin": 0.999609528557218,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        3,
+        5
+      ],
+      "s2_indices": [
+        0
+      ],
+      "label": "{t-4,t-6} vs {t-1}",
+      "neg_R": -0.0014874415145453845,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0002267067002872,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        3,
+        5
+      ],
+      "s2_indices": [
+        1
+      ],
+      "label": "{t-4,t-6} vs {t-2}",
+      "neg_R": -0.0013705467942901617,
+      "H_A": 0.9987392651857419,
+      "margin": 1.000109811980032,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        3,
+        5
+      ],
+      "s2_indices": [
+        2
+      ],
+      "label": "{t-4,t-6} vs {t-3}",
+      "neg_R": -0.001456055619851293,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0001953208055931,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        3,
+        5
+      ],
+      "s2_indices": [
+        4
+      ],
+      "label": "{t-4,t-6} vs {t-5}",
+      "neg_R": -0.0009640546715194986,
+      "H_A": 0.9987392651857419,
+      "margin": 0.9997033198572614,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        4,
+        5
+      ],
+      "s2_indices": [
+        0
+      ],
+      "label": "{t-5,t-6} vs {t-1}",
+      "neg_R": -0.0014217057840761882,
+      "H_A": 0.9987392651857419,
+      "margin": 1.000160970969818,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        4,
+        5
+      ],
+      "s2_indices": [
+        1
+      ],
+      "label": "{t-5,t-6} vs {t-2}",
+      "neg_R": -0.001129717055815993,
+      "H_A": 0.9987392651857419,
+      "margin": 0.9998689822415578,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        4,
+        5
+      ],
+      "s2_indices": [
+        2
+      ],
+      "label": "{t-5,t-6} vs {t-3}",
+      "neg_R": -0.0020476577147061636,
+      "H_A": 0.9987392651857419,
+      "margin": 1.000786922900448,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        4,
+        5
+      ],
+      "s2_indices": [
+        3
+      ],
+      "label": "{t-5,t-6} vs {t-4}",
+      "neg_R": -0.0009796688672074616,
+      "H_A": 0.9987392651857419,
+      "margin": 0.9997189340529493,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        1
+      ],
+      "s2_indices": [
+        2,
+        3,
+        4
+      ],
+      "label": "{t-1,t-2} vs {t-3,t-4,t-5}",
+      "neg_R": -0.01406143760726275,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0128007027930046,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        1
+      ],
+      "s2_indices": [
+        2,
+        3,
+        5
+      ],
+      "label": "{t-1,t-2} vs {t-3,t-4,t-6}",
+      "neg_R": -0.013605608813329173,
+      "H_A": 0.9987392651857419,
+      "margin": 1.012344873999071,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        1
+      ],
+      "s2_indices": [
+        2,
+        4,
+        5
+      ],
+      "label": "{t-1,t-2} vs {t-3,t-5,t-6}",
+      "neg_R": -0.01118654942890629,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0099258146146481,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        1
+      ],
+      "s2_indices": [
+        3,
+        4,
+        5
+      ],
+      "label": "{t-1,t-2} vs {t-4,t-5,t-6}",
+      "neg_R": -0.013100735576163647,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0118400007619055,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        2
+      ],
+      "s2_indices": [
+        1,
+        3,
+        4
+      ],
+      "label": "{t-1,t-3} vs {t-2,t-4,t-5}",
+      "neg_R": -0.01387416906707939,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0126134342528212,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        2
+      ],
+      "s2_indices": [
+        1,
+        3,
+        5
+      ],
+      "label": "{t-1,t-3} vs {t-2,t-4,t-6}",
+      "neg_R": -0.013254625132076203,
+      "H_A": 0.9987392651857419,
+      "margin": 1.011993890317818,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        2
+      ],
+      "s2_indices": [
+        1,
+        4,
+        5
+      ],
+      "label": "{t-1,t-3} vs {t-2,t-5,t-6}",
+      "neg_R": -0.011667997580980582,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0104072627667224,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        2
+      ],
+      "s2_indices": [
+        3,
+        4,
+        5
+      ],
+      "label": "{t-1,t-3} vs {t-4,t-5,t-6}",
+      "neg_R": -0.013549693535169549,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0122889587209114,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        3
+      ],
+      "s2_indices": [
+        1,
+        2,
+        4
+      ],
+      "label": "{t-1,t-4} vs {t-2,t-3,t-5}",
+      "neg_R": -0.013128683814113806,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0118679489998557,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        3
+      ],
+      "s2_indices": [
+        1,
+        2,
+        5
+      ],
+      "label": "{t-1,t-4} vs {t-2,t-3,t-6}",
+      "neg_R": -0.01302534931429955,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0117646145000414,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        3
+      ],
+      "s2_indices": [
+        1,
+        4,
+        5
+      ],
+      "label": "{t-1,t-4} vs {t-2,t-5,t-6}",
+      "neg_R": -0.012138529737392378,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0108777949231342,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        3
+      ],
+      "s2_indices": [
+        2,
+        4,
+        5
+      ],
+      "label": "{t-1,t-4} vs {t-3,t-5,t-6}",
+      "neg_R": -0.012106039544323988,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0108453047300658,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        4
+      ],
+      "s2_indices": [
+        1,
+        2,
+        3
+      ],
+      "label": "{t-1,t-5} vs {t-2,t-3,t-4}",
+      "neg_R": -0.014153704574404014,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0128929697601459,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        4
+      ],
+      "s2_indices": [
+        1,
+        2,
+        5
+      ],
+      "label": "{t-1,t-5} vs {t-2,t-3,t-6}",
+      "neg_R": -0.011643251230214702,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0103825164159566,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        4
+      ],
+      "s2_indices": [
+        1,
+        3,
+        5
+      ],
+      "label": "{t-1,t-5} vs {t-2,t-4,t-6}",
+      "neg_R": -0.012343059204404927,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0110823243901468,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        4
+      ],
+      "s2_indices": [
+        2,
+        3,
+        5
+      ],
+      "label": "{t-1,t-5} vs {t-3,t-4,t-6}",
+      "neg_R": -0.0131430008446638,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0118822660304057,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        5
+      ],
+      "s2_indices": [
+        1,
+        2,
+        3
+      ],
+      "label": "{t-1,t-6} vs {t-2,t-3,t-4}",
+      "neg_R": -0.013637394568264405,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0123766597540063,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        5
+      ],
+      "s2_indices": [
+        1,
+        2,
+        4
+      ],
+      "label": "{t-1,t-6} vs {t-2,t-3,t-5}",
+      "neg_R": -0.011230275723888461,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0099695409096303,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        5
+      ],
+      "s2_indices": [
+        1,
+        3,
+        4
+      ],
+      "label": "{t-1,t-6} vs {t-2,t-4,t-5}",
+      "neg_R": -0.012446293133269393,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0111855583190112,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        5
+      ],
+      "s2_indices": [
+        2,
+        3,
+        4
+      ],
+      "label": "{t-1,t-6} vs {t-3,t-4,t-5}",
+      "neg_R": -0.013082519632457768,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0118217848181996,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1,
+        2
+      ],
+      "s2_indices": [
+        0,
+        3,
+        4
+      ],
+      "label": "{t-2,t-3} vs {t-1,t-4,t-5}",
+      "neg_R": -0.013722218610841441,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0124614837965833,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1,
+        2
+      ],
+      "s2_indices": [
+        0,
+        3,
+        5
+      ],
+      "label": "{t-2,t-3} vs {t-1,t-4,t-6}",
+      "neg_R": -0.013395186918525592,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0121344521042674,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1,
+        2
+      ],
+      "s2_indices": [
+        0,
+        4,
+        5
+      ],
+      "label": "{t-2,t-3} vs {t-1,t-5,t-6}",
+      "neg_R": -0.011633465359425443,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0103727305451673,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1,
+        2
+      ],
+      "s2_indices": [
+        3,
+        4,
+        5
+      ],
+      "label": "{t-2,t-3} vs {t-4,t-5,t-6}",
+      "neg_R": -0.012984921949336314,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0117241871350782,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1,
+        3
+      ],
+      "s2_indices": [
+        0,
+        2,
+        4
+      ],
+      "label": "{t-2,t-4} vs {t-1,t-3,t-5}",
+      "neg_R": -0.012965241555604745,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0117045067413466,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1,
+        3
+      ],
+      "s2_indices": [
+        0,
+        2,
+        5
+      ],
+      "label": "{t-2,t-4} vs {t-1,t-3,t-6}",
+      "neg_R": -0.012691221886788728,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0114304870725306,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1,
+        3
+      ],
+      "s2_indices": [
+        0,
+        4,
+        5
+      ],
+      "label": "{t-2,t-4} vs {t-1,t-5,t-6}",
+      "neg_R": -0.01214714214342738,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0108864073291692,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1,
+        3
+      ],
+      "s2_indices": [
+        2,
+        4,
+        5
+      ],
+      "label": "{t-2,t-4} vs {t-3,t-5,t-6}",
+      "neg_R": -0.011584412586080894,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0103236777718227,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1,
+        4
+      ],
+      "s2_indices": [
+        0,
+        2,
+        3
+      ],
+      "label": "{t-2,t-5} vs {t-1,t-3,t-4}",
+      "neg_R": -0.013746672173376329,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0124859373591182,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1,
+        4
+      ],
+      "s2_indices": [
+        0,
+        2,
+        5
+      ],
+      "label": "{t-2,t-5} vs {t-1,t-3,t-6}",
+      "neg_R": -0.011041966277259618,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0097812314630015,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1,
+        4
+      ],
+      "s2_indices": [
+        0,
+        3,
+        5
+      ],
+      "label": "{t-2,t-5} vs {t-1,t-4,t-6}",
+      "neg_R": -0.012259608093000196,
+      "H_A": 0.9987392651857419,
+      "margin": 1.010998873278742,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1,
+        4
+      ],
+      "s2_indices": [
+        2,
+        3,
+        5
+      ],
+      "label": "{t-2,t-5} vs {t-3,t-4,t-6}",
+      "neg_R": -0.012354216360974668,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0110934815467165,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1,
+        5
+      ],
+      "s2_indices": [
+        0,
+        2,
+        3
+      ],
+      "label": "{t-2,t-6} vs {t-1,t-3,t-4}",
+      "neg_R": -0.013155750005191091,
+      "H_A": 0.9987392651857419,
+      "margin": 1.011895015190933,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1,
+        5
+      ],
+      "s2_indices": [
+        0,
+        2,
+        4
+      ],
+      "label": "{t-2,t-6} vs {t-1,t-3,t-5}",
+      "neg_R": -0.010725063777892174,
+      "H_A": 0.9987392651857419,
+      "margin": 1.009464328963634,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1,
+        5
+      ],
+      "s2_indices": [
+        0,
+        3,
+        4
+      ],
+      "label": "{t-2,t-6} vs {t-1,t-4,t-5}",
+      "neg_R": -0.011995717617133472,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0107349828028753,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1,
+        5
+      ],
+      "s2_indices": [
+        2,
+        3,
+        4
+      ],
+      "label": "{t-2,t-6} vs {t-3,t-4,t-5}",
+      "neg_R": -0.012219122986724784,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0109583881724666,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        2,
+        3
+      ],
+      "s2_indices": [
+        0,
+        1,
+        4
+      ],
+      "label": "{t-3,t-4} vs {t-1,t-2,t-5}",
+      "neg_R": -0.014770792380441211,
+      "H_A": 0.9987392651857419,
+      "margin": 1.013510057566183,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        2,
+        3
+      ],
+      "s2_indices": [
+        0,
+        1,
+        5
+      ],
+      "label": "{t-3,t-4} vs {t-1,t-2,t-6}",
+      "neg_R": -0.014347044614401394,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0130863098001432,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        2,
+        3
+      ],
+      "s2_indices": [
+        0,
+        4,
+        5
+      ],
+      "label": "{t-3,t-4} vs {t-1,t-5,t-6}",
+      "neg_R": -0.013413823004021719,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0121530881897636,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        2,
+        3
+      ],
+      "s2_indices": [
+        1,
+        4,
+        5
+      ],
+      "label": "{t-3,t-4} vs {t-2,t-5,t-6}",
+      "neg_R": -0.012883583639741847,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0116228488254837,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        2,
+        4
+      ],
+      "s2_indices": [
+        0,
+        1,
+        3
+      ],
+      "label": "{t-3,t-5} vs {t-1,t-2,t-4}",
+      "neg_R": -0.011776945246638082,
+      "H_A": 0.9987392651857419,
+      "margin": 1.01051621043238,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        2,
+        4
+      ],
+      "s2_indices": [
+        0,
+        1,
+        5
+      ],
+      "label": "{t-3,t-5} vs {t-1,t-2,t-6}",
+      "neg_R": -0.011786356541247045,
+      "H_A": 0.9987392651857419,
+      "margin": 1.010525621726989,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        2,
+        4
+      ],
+      "s2_indices": [
+        0,
+        3,
+        5
+      ],
+      "label": "{t-3,t-5} vs {t-1,t-4,t-6}",
+      "neg_R": -0.012614856489967519,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0113541216757094,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        2,
+        4
+      ],
+      "s2_indices": [
+        1,
+        3,
+        5
+      ],
+      "label": "{t-3,t-5} vs {t-2,t-4,t-6}",
+      "neg_R": -0.01190952311768223,
+      "H_A": 0.9987392651857419,
+      "margin": 1.010648788303424,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        2,
+        5
+      ],
+      "s2_indices": [
+        0,
+        1,
+        3
+      ],
+      "label": "{t-3,t-6} vs {t-1,t-2,t-4}",
+      "neg_R": -0.011385046885708405,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0101243120714503,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        2,
+        5
+      ],
+      "s2_indices": [
+        0,
+        1,
+        4
+      ],
+      "label": "{t-3,t-6} vs {t-1,t-2,t-5}",
+      "neg_R": -0.011818205946357185,
+      "H_A": 0.9987392651857419,
+      "margin": 1.010557471132099,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        2,
+        5
+      ],
+      "s2_indices": [
+        0,
+        3,
+        4
+      ],
+      "label": "{t-3,t-6} vs {t-1,t-4,t-5}",
+      "neg_R": -0.012549989821353691,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0112892550070955,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        2,
+        5
+      ],
+      "s2_indices": [
+        1,
+        3,
+        4
+      ],
+      "label": "{t-3,t-6} vs {t-2,t-4,t-5}",
+      "neg_R": -0.012137168691756628,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0108764338774985,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        3,
+        4
+      ],
+      "s2_indices": [
+        0,
+        1,
+        2
+      ],
+      "label": "{t-4,t-5} vs {t-1,t-2,t-3}",
+      "neg_R": -0.014628756014256616,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0133680211999985,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        3,
+        4
+      ],
+      "s2_indices": [
+        0,
+        1,
+        5
+      ],
+      "label": "{t-4,t-5} vs {t-1,t-2,t-6}",
+      "neg_R": -0.013137530005677522,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0118767951914194,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        3,
+        4
+      ],
+      "s2_indices": [
+        0,
+        2,
+        5
+      ],
+      "label": "{t-4,t-5} vs {t-1,t-3,t-6}",
+      "neg_R": -0.012748388138658306,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0114876533244002,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        3,
+        4
+      ],
+      "s2_indices": [
+        1,
+        2,
+        5
+      ],
+      "label": "{t-4,t-5} vs {t-2,t-3,t-6}",
+      "neg_R": -0.012560888607925147,
+      "H_A": 0.9987392651857419,
+      "margin": 1.011300153793667,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        3,
+        5
+      ],
+      "s2_indices": [
+        0,
+        1,
+        2
+      ],
+      "label": "{t-4,t-6} vs {t-1,t-2,t-3}",
+      "neg_R": -0.014064973735977038,
+      "H_A": 0.9987392651857419,
+      "margin": 1.012804238921719,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        3,
+        5
+      ],
+      "s2_indices": [
+        0,
+        1,
+        4
+      ],
+      "label": "{t-4,t-6} vs {t-1,t-2,t-5}",
+      "neg_R": -0.012997495493436872,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0117367606791787,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        3,
+        5
+      ],
+      "s2_indices": [
+        0,
+        2,
+        4
+      ],
+      "label": "{t-4,t-6} vs {t-1,t-3,t-5}",
+      "neg_R": -0.01245862552919208,
+      "H_A": 0.9987392651857419,
+      "margin": 1.011197890714934,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        3,
+        5
+      ],
+      "s2_indices": [
+        1,
+        2,
+        4
+      ],
+      "label": "{t-4,t-6} vs {t-2,t-3,t-5}",
+      "neg_R": -0.012100440829458048,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0108397060152,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        4,
+        5
+      ],
+      "s2_indices": [
+        0,
+        1,
+        2
+      ],
+      "label": "{t-5,t-6} vs {t-1,t-2,t-3}",
+      "neg_R": -0.012237516446409913,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0109767816321518,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        4,
+        5
+      ],
+      "s2_indices": [
+        0,
+        1,
+        3
+      ],
+      "label": "{t-5,t-6} vs {t-1,t-2,t-4}",
+      "neg_R": -0.010736879143219191,
+      "H_A": 0.9987392651857419,
+      "margin": 1.009476144328961,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        4,
+        5
+      ],
+      "s2_indices": [
+        0,
+        2,
+        3
+      ],
+      "label": "{t-5,t-6} vs {t-1,t-3,t-4}",
+      "neg_R": -0.01306185446692476,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0118011196526666,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        4,
+        5
+      ],
+      "s2_indices": [
+        1,
+        2,
+        3
+      ],
+      "label": "{t-5,t-6} vs {t-2,t-3,t-4}",
+      "neg_R": -0.012680102384263314,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0114193675700052,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        1
+      ],
+      "s2_indices": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "label": "{t-1,t-2} vs {t-3,t-4,t-5,t-6}",
+      "neg_R": -0.0474731372955155,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0462124024812574,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        2
+      ],
+      "s2_indices": [
+        1,
+        3,
+        4,
+        5
+      ],
+      "label": "{t-1,t-3} vs {t-2,t-4,t-5,t-6}",
+      "neg_R": -0.04768739594750837,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0464266611332502,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        3
+      ],
+      "s2_indices": [
+        1,
+        2,
+        4,
+        5
+      ],
+      "label": "{t-1,t-4} vs {t-2,t-3,t-5,t-6}",
+      "neg_R": -0.04654604986531519,
+      "H_A": 0.9987392651857419,
+      "margin": 1.045285315051057,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        4
+      ],
+      "s2_indices": [
+        1,
+        2,
+        3,
+        5
+      ],
+      "label": "{t-1,t-5} vs {t-2,t-3,t-4,t-6}",
+      "neg_R": -0.04739378724418497,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0461330524299268,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        5
+      ],
+      "s2_indices": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "label": "{t-1,t-6} vs {t-2,t-3,t-4,t-5}",
+      "neg_R": -0.04720008816252674,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0459393533482686,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1,
+        2
+      ],
+      "s2_indices": [
+        0,
+        3,
+        4,
+        5
+      ],
+      "label": "{t-2,t-3} vs {t-1,t-4,t-5,t-6}",
+      "neg_R": -0.04761305208182787,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0463523172675697,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1,
+        3
+      ],
+      "s2_indices": [
+        0,
+        2,
+        4,
+        5
+      ],
+      "label": "{t-2,t-4} vs {t-1,t-3,t-5,t-6}",
+      "neg_R": -0.04510136228090289,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0438406274666447,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1,
+        4
+      ],
+      "s2_indices": [
+        0,
+        2,
+        3,
+        5
+      ],
+      "label": "{t-2,t-5} vs {t-1,t-3,t-4,t-6}",
+      "neg_R": -0.04682515455745451,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0455644197431964,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1,
+        5
+      ],
+      "s2_indices": [
+        0,
+        2,
+        3,
+        4
+      ],
+      "label": "{t-2,t-6} vs {t-1,t-3,t-4,t-5}",
+      "neg_R": -0.04590507118627807,
+      "H_A": 0.9987392651857419,
+      "margin": 1.04464433637202,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        2,
+        3
+      ],
+      "s2_indices": [
+        0,
+        1,
+        4,
+        5
+      ],
+      "label": "{t-3,t-4} vs {t-1,t-2,t-5,t-6}",
+      "neg_R": -0.048760648565658204,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0474999137514,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        2,
+        4
+      ],
+      "s2_indices": [
+        0,
+        1,
+        3,
+        5
+      ],
+      "label": "{t-3,t-5} vs {t-1,t-2,t-4,t-6}",
+      "neg_R": -0.04551758607165013,
+      "H_A": 0.9987392651857419,
+      "margin": 1.044256851257392,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        2,
+        5
+      ],
+      "s2_indices": [
+        0,
+        1,
+        3,
+        4
+      ],
+      "label": "{t-3,t-6} vs {t-1,t-2,t-4,t-5}",
+      "neg_R": -0.045356479205393985,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0440957443911358,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        3,
+        4
+      ],
+      "s2_indices": [
+        0,
+        1,
+        2,
+        5
+      ],
+      "label": "{t-4,t-5} vs {t-1,t-2,t-3,t-6}",
+      "neg_R": -0.04823300215707915,
+      "H_A": 0.9987392651857419,
+      "margin": 1.046972267342821,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        3,
+        5
+      ],
+      "s2_indices": [
+        0,
+        1,
+        2,
+        4
+      ],
+      "label": "{t-4,t-6} vs {t-1,t-2,t-3,t-5}",
+      "neg_R": -0.04742880139583505,
+      "H_A": 0.9987392651857419,
+      "margin": 1.046168066581577,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        4,
+        5
+      ],
+      "s2_indices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "label": "{t-5,t-6} vs {t-1,t-2,t-3,t-4}",
+      "neg_R": -0.04639686459663439,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0451361297823762,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        1,
+        2
+      ],
+      "s2_indices": [
+        3
+      ],
+      "label": "{t-1,t-2,t-3} vs {t-4}",
+      "neg_R": -0.004673292408503116,
+      "H_A": 0.9987392651857419,
+      "margin": 1.003412557594245,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        1,
+        2
+      ],
+      "s2_indices": [
+        4
+      ],
+      "label": "{t-1,t-2,t-3} vs {t-5}",
+      "neg_R": -0.0036257414136140476,
+      "H_A": 0.9987392651857419,
+      "margin": 1.002365006599356,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        1,
+        2
+      ],
+      "s2_indices": [
+        5
+      ],
+      "label": "{t-1,t-2,t-3} vs {t-6}",
+      "neg_R": -0.0027277493523270024,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0014670145380689,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        1,
+        3
+      ],
+      "s2_indices": [
+        2
+      ],
+      "label": "{t-1,t-2,t-4} vs {t-3}",
+      "neg_R": -0.002326457805554183,
+      "H_A": 0.9987392651857419,
+      "margin": 1.001065722991296,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        1,
+        3
+      ],
+      "s2_indices": [
+        4
+      ],
+      "label": "{t-1,t-2,t-4} vs {t-5}",
+      "neg_R": -0.0030181367537838177,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0017574019395257,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        1,
+        3
+      ],
+      "s2_indices": [
+        5
+      ],
+      "label": "{t-1,t-2,t-4} vs {t-6}",
+      "neg_R": -0.002591354670136603,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0013306198558785,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        1,
+        4
+      ],
+      "s2_indices": [
+        2
+      ],
+      "label": "{t-1,t-2,t-5} vs {t-3}",
+      "neg_R": -0.0035551373565694266,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0022944025423113,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        1,
+        4
+      ],
+      "s2_indices": [
+        3
+      ],
+      "label": "{t-1,t-2,t-5} vs {t-4}",
+      "neg_R": -0.005294367299689906,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0040336324854318,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        1,
+        4
+      ],
+      "s2_indices": [
+        5
+      ],
+      "label": "{t-1,t-2,t-5} vs {t-6}",
+      "neg_R": -0.0023421393099316568,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0010814044956735,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        1,
+        5
+      ],
+      "s2_indices": [
+        2
+      ],
+      "label": "{t-1,t-2,t-6} vs {t-3}",
+      "neg_R": -0.0028909711075668643,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0016302362933087,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        1,
+        5
+      ],
+      "s2_indices": [
+        3
+      ],
+      "label": "{t-1,t-2,t-6} vs {t-4}",
+      "neg_R": -0.005101411028323621,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0038406762140655,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        1,
+        5
+      ],
+      "s2_indices": [
+        4
+      ],
+      "label": "{t-1,t-2,t-6} vs {t-5}",
+      "neg_R": -0.0025759651222125868,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0013152303079544,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        2,
+        3
+      ],
+      "s2_indices": [
+        1
+      ],
+      "label": "{t-1,t-3,t-4} vs {t-2}",
+      "neg_R": -0.0037659826634379723,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0025052478491798,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        2,
+        3
+      ],
+      "s2_indices": [
+        4
+      ],
+      "label": "{t-1,t-3,t-4} vs {t-5}",
+      "neg_R": -0.004240247892384197,
+      "H_A": 0.9987392651857419,
+      "margin": 1.002979513078126,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        2,
+        3
+      ],
+      "s2_indices": [
+        5
+      ],
+      "label": "{t-1,t-3,t-4} vs {t-6}",
+      "neg_R": -0.003253513111070472,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0019927782968123,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        2,
+        4
+      ],
+      "s2_indices": [
+        1
+      ],
+      "label": "{t-1,t-3,t-5} vs {t-2}",
+      "neg_R": -0.0021308169265028543,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0008700821122447,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        2,
+        4
+      ],
+      "s2_indices": [
+        3
+      ],
+      "label": "{t-1,t-3,t-5} vs {t-4}",
+      "neg_R": -0.0036526331503399234,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0023918983360818,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        2,
+        4
+      ],
+      "s2_indices": [
+        5
+      ],
+      "label": "{t-1,t-3,t-5} vs {t-6}",
+      "neg_R": -0.004195874769846952,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0029351399555888,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        2,
+        5
+      ],
+      "s2_indices": [
+        1
+      ],
+      "label": "{t-1,t-3,t-6} vs {t-2}",
+      "neg_R": -0.0016163787747249803,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0003556439604668,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        2,
+        5
+      ],
+      "s2_indices": [
+        3
+      ],
+      "label": "{t-1,t-3,t-6} vs {t-4}",
+      "neg_R": -0.0030494522785344813,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0017887174642763,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        2,
+        5
+      ],
+      "s2_indices": [
+        4
+      ],
+      "label": "{t-1,t-3,t-6} vs {t-5}",
+      "neg_R": -0.004579428679354347,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0033186938650962,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        3,
+        4
+      ],
+      "s2_indices": [
+        1
+      ],
+      "label": "{t-1,t-4,t-5} vs {t-2}",
+      "neg_R": -0.004294503409105532,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0030337685948474,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        3,
+        4
+      ],
+      "s2_indices": [
+        2
+      ],
+      "label": "{t-1,t-4,t-5} vs {t-3}",
+      "neg_R": -0.004077089689824787,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0028163548755666,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        3,
+        4
+      ],
+      "s2_indices": [
+        5
+      ],
+      "label": "{t-1,t-4,t-5} vs {t-6}",
+      "neg_R": -0.0024411620241622245,
+      "H_A": 0.9987392651857419,
+      "margin": 1.001180427209904,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        3,
+        5
+      ],
+      "s2_indices": [
+        1
+      ],
+      "label": "{t-1,t-4,t-6} vs {t-2}",
+      "neg_R": -0.0041982632114623275,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0029375283972042,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        3,
+        5
+      ],
+      "s2_indices": [
+        2
+      ],
+      "label": "{t-1,t-4,t-6} vs {t-3}",
+      "neg_R": -0.0034208967945141833,
+      "H_A": 0.9987392651857419,
+      "margin": 1.002160161980256,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        3,
+        5
+      ],
+      "s2_indices": [
+        4
+      ],
+      "label": "{t-1,t-4,t-6} vs {t-5}",
+      "neg_R": -0.0027717039101662344,
+      "H_A": 0.9987392651857419,
+      "margin": 1.001510969095908,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        4,
+        5
+      ],
+      "s2_indices": [
+        1
+      ],
+      "label": "{t-1,t-5,t-6} vs {t-2}",
+      "neg_R": -0.0017541672315093404,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0004934324172512,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        4,
+        5
+      ],
+      "s2_indices": [
+        2
+      ],
+      "label": "{t-1,t-5,t-6} vs {t-3}",
+      "neg_R": -0.00503222312149032,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0037714883072322,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        4,
+        5
+      ],
+      "s2_indices": [
+        3
+      ],
+      "label": "{t-1,t-5,t-6} vs {t-4}",
+      "neg_R": -0.0028530538363225055,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0015923190220644,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1,
+        2,
+        3
+      ],
+      "s2_indices": [
+        0
+      ],
+      "label": "{t-2,t-3,t-4} vs {t-1}",
+      "neg_R": -0.004206458673319258,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0029457238590611,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1,
+        2,
+        3
+      ],
+      "s2_indices": [
+        4
+      ],
+      "label": "{t-2,t-3,t-4} vs {t-5}",
+      "neg_R": -0.003426875479207947,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0021661406649498,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1,
+        2,
+        3
+      ],
+      "s2_indices": [
+        5
+      ],
+      "label": "{t-2,t-3,t-4} vs {t-6}",
+      "neg_R": -0.0030919128253685813,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0018311780111104,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1,
+        2,
+        4
+      ],
+      "s2_indices": [
+        0
+      ],
+      "label": "{t-2,t-3,t-5} vs {t-1}",
+      "neg_R": -0.0025948603193097775,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0013341255050516,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1,
+        2,
+        4
+      ],
+      "s2_indices": [
+        3
+      ],
+      "label": "{t-2,t-3,t-5} vs {t-4}",
+      "neg_R": -0.0028628281200893113,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0016020933058312,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1,
+        2,
+        4
+      ],
+      "s2_indices": [
+        5
+      ],
+      "label": "{t-2,t-3,t-5} vs {t-6}",
+      "neg_R": -0.0029146294439463816,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0016538946296882,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1,
+        2,
+        5
+      ],
+      "s2_indices": [
+        0
+      ],
+      "label": "{t-2,t-3,t-6} vs {t-1}",
+      "neg_R": -0.002251107336531888,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0009903725222737,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1,
+        2,
+        5
+      ],
+      "s2_indices": [
+        3
+      ],
+      "label": "{t-2,t-3,t-6} vs {t-4}",
+      "neg_R": -0.003082104544759101,
+      "H_A": 0.9987392651857419,
+      "margin": 1.001821369730501,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1,
+        2,
+        5
+      ],
+      "s2_indices": [
+        4
+      ],
+      "label": "{t-2,t-3,t-6} vs {t-5}",
+      "neg_R": -0.003468868522454649,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0022081337081965,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1,
+        3,
+        4
+      ],
+      "s2_indices": [
+        0
+      ],
+      "label": "{t-2,t-4,t-5} vs {t-1}",
+      "neg_R": -0.0047039103720485365,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0034431755577904,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1,
+        3,
+        4
+      ],
+      "s2_indices": [
+        2
+      ],
+      "label": "{t-2,t-4,t-5} vs {t-3}",
+      "neg_R": -0.0032326482297111436,
+      "H_A": 0.9987392651857419,
+      "margin": 1.001971913415453,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1,
+        3,
+        4
+      ],
+      "s2_indices": [
+        5
+      ],
+      "label": "{t-2,t-4,t-5} vs {t-6}",
+      "neg_R": -0.002518768614720557,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0012580338004624,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1,
+        3,
+        5
+      ],
+      "s2_indices": [
+        0
+      ],
+      "label": "{t-2,t-4,t-6} vs {t-1}",
+      "neg_R": -0.0043151579317179944,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0030544231174598,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1,
+        3,
+        5
+      ],
+      "s2_indices": [
+        2
+      ],
+      "label": "{t-2,t-4,t-6} vs {t-3}",
+      "neg_R": -0.0029357152191866742,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0016749804049285,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1,
+        3,
+        5
+      ],
+      "s2_indices": [
+        4
+      ],
+      "label": "{t-2,t-4,t-6} vs {t-5}",
+      "neg_R": -0.0025567982580372295,
+      "H_A": 0.9987392651857419,
+      "margin": 1.001296063443779,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1,
+        4,
+        5
+      ],
+      "s2_indices": [
+        0
+      ],
+      "label": "{t-2,t-5,t-6} vs {t-1}",
+      "neg_R": -0.0020461559597695356,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0007854211455114,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1,
+        4,
+        5
+      ],
+      "s2_indices": [
+        2
+      ],
+      "label": "{t-2,t-5,t-6} vs {t-3}",
+      "neg_R": -0.0035789231310447978,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0023181883167867,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1,
+        4,
+        5
+      ],
+      "s2_indices": [
+        3
+      ],
+      "label": "{t-2,t-5,t-6} vs {t-4}",
+      "neg_R": -0.002813242192198917,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0015525073779408,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        2,
+        3,
+        4
+      ],
+      "s2_indices": [
+        0
+      ],
+      "label": "{t-3,t-4,t-5} vs {t-1}",
+      "neg_R": -0.004237272686136162,
+      "H_A": 0.9987392651857419,
+      "margin": 1.002976537871878,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        2,
+        3,
+        4
+      ],
+      "s2_indices": [
+        1
+      ],
+      "label": "{t-3,t-4,t-5} vs {t-2}",
+      "neg_R": -0.002983424263079515,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0017226894488214,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        2,
+        3,
+        4
+      ],
+      "s2_indices": [
+        5
+      ],
+      "label": "{t-3,t-4,t-5} vs {t-6}",
+      "neg_R": -0.0029202958068959006,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0016595609926378,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        2,
+        3,
+        5
+      ],
+      "s2_indices": [
+        0
+      ],
+      "label": "{t-3,t-4,t-6} vs {t-1}",
+      "neg_R": -0.0034522826892078307,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0021915478749497,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        2,
+        3,
+        5
+      ],
+      "s2_indices": [
+        1
+      ],
+      "label": "{t-3,t-4,t-6} vs {t-2}",
+      "neg_R": -0.0028502063936246547,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0015894715793665,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        2,
+        3,
+        5
+      ],
+      "s2_indices": [
+        4
+      ],
+      "label": "{t-3,t-4,t-6} vs {t-5}",
+      "neg_R": -0.0031220405912821825,
+      "H_A": 0.9987392651857419,
+      "margin": 1.001861305777024,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        2,
+        4,
+        5
+      ],
+      "s2_indices": [
+        0
+      ],
+      "label": "{t-3,t-5,t-6} vs {t-1}",
+      "neg_R": -0.004406271190861233,
+      "H_A": 0.9987392651857419,
+      "margin": 1.003145536376603,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        2,
+        4,
+        5
+      ],
+      "s2_indices": [
+        1
+      ],
+      "label": "{t-3,t-5,t-6} vs {t-2}",
+      "neg_R": -0.0026609824721555153,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0014002476578974,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        2,
+        4,
+        5
+      ],
+      "s2_indices": [
+        3
+      ],
+      "label": "{t-3,t-5,t-6} vs {t-4}",
+      "neg_R": -0.002546052692116607,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0012853178778585,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        3,
+        4,
+        5
+      ],
+      "s2_indices": [
+        0
+      ],
+      "label": "{t-4,t-5,t-6} vs {t-1}",
+      "neg_R": -0.003295090753191676,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0020343559389335,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        3,
+        4,
+        5
+      ],
+      "s2_indices": [
+        1
+      ],
+      "label": "{t-4,t-5,t-6} vs {t-2}",
+      "neg_R": -0.0029632903808078925,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0017025555665497,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        3,
+        4,
+        5
+      ],
+      "s2_indices": [
+        2
+      ],
+      "label": "{t-4,t-5,t-6} vs {t-3}",
+      "neg_R": -0.003614041539614865,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0023533067253567,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        1,
+        2
+      ],
+      "s2_indices": [
+        3,
+        4
+      ],
+      "label": "{t-1,t-2,t-3} vs {t-4,t-5}",
+      "neg_R": -0.014628756014256616,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0133680211999985,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        1,
+        2
+      ],
+      "s2_indices": [
+        3,
+        5
+      ],
+      "label": "{t-1,t-2,t-3} vs {t-4,t-6}",
+      "neg_R": -0.014064973735979702,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0128042389217216,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        1,
+        2
+      ],
+      "s2_indices": [
+        4,
+        5
+      ],
+      "label": "{t-1,t-2,t-3} vs {t-5,t-6}",
+      "neg_R": -0.012237516446410801,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0109767816321527,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        1,
+        3
+      ],
+      "s2_indices": [
+        2,
+        4
+      ],
+      "label": "{t-1,t-2,t-4} vs {t-3,t-5}",
+      "neg_R": -0.011776945246639858,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0105162104323817,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        1,
+        3
+      ],
+      "s2_indices": [
+        2,
+        5
+      ],
+      "label": "{t-1,t-2,t-4} vs {t-3,t-6}",
+      "neg_R": -0.011385046885709293,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0101243120714511,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        1,
+        3
+      ],
+      "s2_indices": [
+        4,
+        5
+      ],
+      "label": "{t-1,t-2,t-4} vs {t-5,t-6}",
+      "neg_R": -0.010736879143220968,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0094761443289628,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        1,
+        4
+      ],
+      "s2_indices": [
+        2,
+        3
+      ],
+      "label": "{t-1,t-2,t-5} vs {t-3,t-4}",
+      "neg_R": -0.014770792380441211,
+      "H_A": 0.9987392651857419,
+      "margin": 1.013510057566183,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        1,
+        4
+      ],
+      "s2_indices": [
+        2,
+        5
+      ],
+      "label": "{t-1,t-2,t-5} vs {t-3,t-6}",
+      "neg_R": -0.011818205946355409,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0105574711320973,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        1,
+        4
+      ],
+      "s2_indices": [
+        3,
+        5
+      ],
+      "label": "{t-1,t-2,t-5} vs {t-4,t-6}",
+      "neg_R": -0.012997495493439537,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0117367606791814,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        1,
+        5
+      ],
+      "s2_indices": [
+        2,
+        3
+      ],
+      "label": "{t-1,t-2,t-6} vs {t-3,t-4}",
+      "neg_R": -0.01434704461440317,
+      "H_A": 0.9987392651857419,
+      "margin": 1.013086309800145,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        1,
+        5
+      ],
+      "s2_indices": [
+        2,
+        4
+      ],
+      "label": "{t-1,t-2,t-6} vs {t-3,t-5}",
+      "neg_R": -0.011786356541247933,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0105256217269898,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        1,
+        5
+      ],
+      "s2_indices": [
+        3,
+        4
+      ],
+      "label": "{t-1,t-2,t-6} vs {t-4,t-5}",
+      "neg_R": -0.013137530005677522,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0118767951914194,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        2,
+        3
+      ],
+      "s2_indices": [
+        1,
+        4
+      ],
+      "label": "{t-1,t-3,t-4} vs {t-2,t-5}",
+      "neg_R": -0.013746672173376329,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0124859373591182,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        2,
+        3
+      ],
+      "s2_indices": [
+        1,
+        5
+      ],
+      "label": "{t-1,t-3,t-4} vs {t-2,t-6}",
+      "neg_R": -0.013155750005193756,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0118950151909356,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        2,
+        3
+      ],
+      "s2_indices": [
+        4,
+        5
+      ],
+      "label": "{t-1,t-3,t-4} vs {t-5,t-6}",
+      "neg_R": -0.013061854466923872,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0118011196526657,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        2,
+        4
+      ],
+      "s2_indices": [
+        1,
+        3
+      ],
+      "label": "{t-1,t-3,t-5} vs {t-2,t-4}",
+      "neg_R": -0.012965241555601192,
+      "H_A": 0.9987392651857419,
+      "margin": 1.011704506741343,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        2,
+        4
+      ],
+      "s2_indices": [
+        1,
+        5
+      ],
+      "label": "{t-1,t-3,t-5} vs {t-2,t-6}",
+      "neg_R": -0.010725063777891286,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0094643289636331,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        2,
+        4
+      ],
+      "s2_indices": [
+        3,
+        5
+      ],
+      "label": "{t-1,t-3,t-5} vs {t-4,t-6}",
+      "neg_R": -0.012458625529192968,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0111978907149348,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        2,
+        5
+      ],
+      "s2_indices": [
+        1,
+        3
+      ],
+      "label": "{t-1,t-3,t-6} vs {t-2,t-4}",
+      "neg_R": -0.012691221886788728,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0114304870725306,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        2,
+        5
+      ],
+      "s2_indices": [
+        1,
+        4
+      ],
+      "label": "{t-1,t-3,t-6} vs {t-2,t-5}",
+      "neg_R": -0.011041966277261395,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0097812314630032,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        2,
+        5
+      ],
+      "s2_indices": [
+        3,
+        4
+      ],
+      "label": "{t-1,t-3,t-6} vs {t-4,t-5}",
+      "neg_R": -0.01274838813865653,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0114876533243984,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        3,
+        4
+      ],
+      "s2_indices": [
+        1,
+        2
+      ],
+      "label": "{t-1,t-4,t-5} vs {t-2,t-3}",
+      "neg_R": -0.013722218610843218,
+      "H_A": 0.9987392651857419,
+      "margin": 1.012461483796585,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        3,
+        4
+      ],
+      "s2_indices": [
+        1,
+        5
+      ],
+      "label": "{t-1,t-4,t-5} vs {t-2,t-6}",
+      "neg_R": -0.01199571761713436,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0107349828028762,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        3,
+        4
+      ],
+      "s2_indices": [
+        2,
+        5
+      ],
+      "label": "{t-1,t-4,t-5} vs {t-3,t-6}",
+      "neg_R": -0.012549989821354579,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0112892550070964,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        3,
+        5
+      ],
+      "s2_indices": [
+        1,
+        2
+      ],
+      "label": "{t-1,t-4,t-6} vs {t-2,t-3}",
+      "neg_R": -0.013395186918524704,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0121344521042666,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        3,
+        5
+      ],
+      "s2_indices": [
+        1,
+        4
+      ],
+      "label": "{t-1,t-4,t-6} vs {t-2,t-5}",
+      "neg_R": -0.012259608093001084,
+      "H_A": 0.9987392651857419,
+      "margin": 1.010998873278743,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        3,
+        5
+      ],
+      "s2_indices": [
+        2,
+        4
+      ],
+      "label": "{t-1,t-4,t-6} vs {t-3,t-5}",
+      "neg_R": -0.012614856489967519,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0113541216757094,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        4,
+        5
+      ],
+      "s2_indices": [
+        1,
+        2
+      ],
+      "label": "{t-1,t-5,t-6} vs {t-2,t-3}",
+      "neg_R": -0.011633465359424555,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0103727305451664,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        4,
+        5
+      ],
+      "s2_indices": [
+        1,
+        3
+      ],
+      "label": "{t-1,t-5,t-6} vs {t-2,t-4}",
+      "neg_R": -0.01214714214342738,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0108864073291692,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        4,
+        5
+      ],
+      "s2_indices": [
+        2,
+        3
+      ],
+      "label": "{t-1,t-5,t-6} vs {t-3,t-4}",
+      "neg_R": -0.013413823004022607,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0121530881897645,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1,
+        2,
+        3
+      ],
+      "s2_indices": [
+        0,
+        4
+      ],
+      "label": "{t-2,t-3,t-4} vs {t-1,t-5}",
+      "neg_R": -0.014153704574404014,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0128929697601459,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1,
+        2,
+        3
+      ],
+      "s2_indices": [
+        0,
+        5
+      ],
+      "label": "{t-2,t-3,t-4} vs {t-1,t-6}",
+      "neg_R": -0.013637394568264405,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0123766597540063,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1,
+        2,
+        3
+      ],
+      "s2_indices": [
+        4,
+        5
+      ],
+      "label": "{t-2,t-3,t-4} vs {t-5,t-6}",
+      "neg_R": -0.012680102384266867,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0114193675700087,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1,
+        2,
+        4
+      ],
+      "s2_indices": [
+        0,
+        3
+      ],
+      "label": "{t-2,t-3,t-5} vs {t-1,t-4}",
+      "neg_R": -0.01312868381411203,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0118679489998539,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1,
+        2,
+        4
+      ],
+      "s2_indices": [
+        0,
+        5
+      ],
+      "label": "{t-2,t-3,t-5} vs {t-1,t-6}",
+      "neg_R": -0.011230275723888461,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0099695409096303,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1,
+        2,
+        4
+      ],
+      "s2_indices": [
+        3,
+        5
+      ],
+      "label": "{t-2,t-3,t-5} vs {t-4,t-6}",
+      "neg_R": -0.012100440829459824,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0108397060152017,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1,
+        2,
+        5
+      ],
+      "s2_indices": [
+        0,
+        3
+      ],
+      "label": "{t-2,t-3,t-6} vs {t-1,t-4}",
+      "neg_R": -0.013025349314300438,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0117646145000423,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1,
+        2,
+        5
+      ],
+      "s2_indices": [
+        0,
+        4
+      ],
+      "label": "{t-2,t-3,t-6} vs {t-1,t-5}",
+      "neg_R": -0.01164325123021559,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0103825164159574,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1,
+        2,
+        5
+      ],
+      "s2_indices": [
+        3,
+        4
+      ],
+      "label": "{t-2,t-3,t-6} vs {t-4,t-5}",
+      "neg_R": -0.01256088860792337,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0113001537936652,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1,
+        3,
+        4
+      ],
+      "s2_indices": [
+        0,
+        2
+      ],
+      "label": "{t-2,t-4,t-5} vs {t-1,t-3}",
+      "neg_R": -0.013874169067081166,
+      "H_A": 0.9987392651857419,
+      "margin": 1.012613434252823,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1,
+        3,
+        4
+      ],
+      "s2_indices": [
+        0,
+        5
+      ],
+      "label": "{t-2,t-4,t-5} vs {t-1,t-6}",
+      "neg_R": -0.01244629313327028,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0111855583190121,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1,
+        3,
+        4
+      ],
+      "s2_indices": [
+        2,
+        5
+      ],
+      "label": "{t-2,t-4,t-5} vs {t-3,t-6}",
+      "neg_R": -0.012137168691756628,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0108764338774985,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1,
+        3,
+        5
+      ],
+      "s2_indices": [
+        0,
+        2
+      ],
+      "label": "{t-2,t-4,t-6} vs {t-1,t-3}",
+      "neg_R": -0.013254625132075315,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0119938903178172,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1,
+        3,
+        5
+      ],
+      "s2_indices": [
+        0,
+        4
+      ],
+      "label": "{t-2,t-4,t-6} vs {t-1,t-5}",
+      "neg_R": -0.012343059204404927,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0110823243901468,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1,
+        3,
+        5
+      ],
+      "s2_indices": [
+        2,
+        4
+      ],
+      "label": "{t-2,t-4,t-6} vs {t-3,t-5}",
+      "neg_R": -0.01190952311768223,
+      "H_A": 0.9987392651857419,
+      "margin": 1.010648788303424,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1,
+        4,
+        5
+      ],
+      "s2_indices": [
+        0,
+        2
+      ],
+      "label": "{t-2,t-5,t-6} vs {t-1,t-3}",
+      "neg_R": -0.011667997580978806,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0104072627667207,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1,
+        4,
+        5
+      ],
+      "s2_indices": [
+        0,
+        3
+      ],
+      "label": "{t-2,t-5,t-6} vs {t-1,t-4}",
+      "neg_R": -0.012138529737393267,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0108777949231351,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1,
+        4,
+        5
+      ],
+      "s2_indices": [
+        2,
+        3
+      ],
+      "label": "{t-2,t-5,t-6} vs {t-3,t-4}",
+      "neg_R": -0.01288358363974007,
+      "H_A": 0.9987392651857419,
+      "margin": 1.011622848825482,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        2,
+        3,
+        4
+      ],
+      "s2_indices": [
+        0,
+        1
+      ],
+      "label": "{t-3,t-4,t-5} vs {t-1,t-2}",
+      "neg_R": -0.01406143760726275,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0128007027930046,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        2,
+        3,
+        4
+      ],
+      "s2_indices": [
+        0,
+        5
+      ],
+      "label": "{t-3,t-4,t-5} vs {t-1,t-6}",
+      "neg_R": -0.013082519632459544,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0118217848182014,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        2,
+        3,
+        4
+      ],
+      "s2_indices": [
+        1,
+        5
+      ],
+      "label": "{t-3,t-4,t-5} vs {t-2,t-6}",
+      "neg_R": -0.012219122986724784,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0109583881724666,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        2,
+        3,
+        5
+      ],
+      "s2_indices": [
+        0,
+        1
+      ],
+      "label": "{t-3,t-4,t-6} vs {t-1,t-2}",
+      "neg_R": -0.013605608813327397,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0123448739990693,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        2,
+        3,
+        5
+      ],
+      "s2_indices": [
+        0,
+        4
+      ],
+      "label": "{t-3,t-4,t-6} vs {t-1,t-5}",
+      "neg_R": -0.013143000844664687,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0118822660304065,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        2,
+        3,
+        5
+      ],
+      "s2_indices": [
+        1,
+        4
+      ],
+      "label": "{t-3,t-4,t-6} vs {t-2,t-5}",
+      "neg_R": -0.012354216360974668,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0110934815467165,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        2,
+        4,
+        5
+      ],
+      "s2_indices": [
+        0,
+        1
+      ],
+      "label": "{t-3,t-5,t-6} vs {t-1,t-2}",
+      "neg_R": -0.011186549428904513,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0099258146146464,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        2,
+        4,
+        5
+      ],
+      "s2_indices": [
+        0,
+        3
+      ],
+      "label": "{t-3,t-5,t-6} vs {t-1,t-4}",
+      "neg_R": -0.012106039544324876,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0108453047300667,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        2,
+        4,
+        5
+      ],
+      "s2_indices": [
+        1,
+        3
+      ],
+      "label": "{t-3,t-5,t-6} vs {t-2,t-4}",
+      "neg_R": -0.011584412586079118,
+      "H_A": 0.9987392651857419,
+      "margin": 1.010323677771821,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        3,
+        4,
+        5
+      ],
+      "s2_indices": [
+        0,
+        1
+      ],
+      "label": "{t-4,t-5,t-6} vs {t-1,t-2}",
+      "neg_R": -0.013100735576165423,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0118400007619073,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        3,
+        4,
+        5
+      ],
+      "s2_indices": [
+        0,
+        2
+      ],
+      "label": "{t-4,t-5,t-6} vs {t-1,t-3}",
+      "neg_R": -0.013549693535169549,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0122889587209114,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        3,
+        4,
+        5
+      ],
+      "s2_indices": [
+        1,
+        2
+      ],
+      "label": "{t-4,t-5,t-6} vs {t-2,t-3}",
+      "neg_R": -0.012984921949336314,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0117241871350782,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "s2_indices": [
+        4
+      ],
+      "label": "{t-1,t-2,t-3,t-4} vs {t-5}",
+      "neg_R": -0.010415342750373924,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0091546079361158,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "s2_indices": [
+        5
+      ],
+      "label": "{t-1,t-2,t-3,t-4} vs {t-6}",
+      "neg_R": -0.009757769172054065,
+      "H_A": 0.9987392651857419,
+      "margin": 1.008497034357796,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        1,
+        2,
+        4
+      ],
+      "s2_indices": [
+        3
+      ],
+      "label": "{t-1,t-2,t-3,t-5} vs {t-4}",
+      "neg_R": -0.011462893745262992,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0102021589310048,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        1,
+        2,
+        4
+      ],
+      "s2_indices": [
+        5
+      ],
+      "label": "{t-1,t-2,t-3,t-5} vs {t-6}",
+      "neg_R": -0.008962248681685825,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0077015138674277,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        1,
+        2,
+        5
+      ],
+      "s2_indices": [
+        3
+      ],
+      "label": "{t-1,t-2,t-3,t-6} vs {t-4}",
+      "neg_R": -0.011703312228230178,
+      "H_A": 0.9987392651857419,
+      "margin": 1.010442577413972,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        1,
+        2,
+        5
+      ],
+      "s2_indices": [
+        4
+      ],
+      "label": "{t-1,t-2,t-3,t-6} vs {t-5}",
+      "neg_R": -0.00986024074297287,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0085995059287147,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        1,
+        3,
+        4
+      ],
+      "s2_indices": [
+        2
+      ],
+      "label": "{t-1,t-2,t-4,t-5} vs {t-3}",
+      "neg_R": -0.009723663802146065,
+      "H_A": 0.9987392651857419,
+      "margin": 1.008462928987888,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        1,
+        3,
+        4
+      ],
+      "s2_indices": [
+        5
+      ],
+      "label": "{t-1,t-2,t-4,t-5} vs {t-6}",
+      "neg_R": -0.008069216038326221,
+      "H_A": 0.9987392651857419,
+      "margin": 1.006808481224068,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        1,
+        3,
+        5
+      ],
+      "s2_indices": [
+        2
+      ],
+      "label": "{t-1,t-2,t-4,t-6} vs {t-3}",
+      "neg_R": -0.009492872307470757,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0082321374932126,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        1,
+        3,
+        5
+      ],
+      "s2_indices": [
+        4
+      ],
+      "label": "{t-1,t-2,t-4,t-6} vs {t-5}",
+      "neg_R": -0.00849599812197166,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0072352633077135,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        1,
+        4,
+        5
+      ],
+      "s2_indices": [
+        2
+      ],
+      "label": "{t-1,t-2,t-5,t-6} vs {t-3}",
+      "neg_R": -0.010175246728322707,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0089145119140646,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        1,
+        4,
+        5
+      ],
+      "s2_indices": [
+        3
+      ],
+      "label": "{t-1,t-2,t-5,t-6} vs {t-4}",
+      "neg_R": -0.011021444028085359,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0097607092138272,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        2,
+        3,
+        4
+      ],
+      "s2_indices": [
+        1
+      ],
+      "label": "{t-1,t-3,t-4,t-5} vs {t-2}",
+      "neg_R": -0.0099410775214277,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0086803427071696,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        2,
+        3,
+        4
+      ],
+      "s2_indices": [
+        5
+      ],
+      "label": "{t-1,t-3,t-4,t-5} vs {t-6}",
+      "neg_R": -0.009172080223428747,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0079113454091706,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        2,
+        3,
+        5
+      ],
+      "s2_indices": [
+        1
+      ],
+      "label": "{t-1,t-3,t-4,t-6} vs {t-2}",
+      "neg_R": -0.010270238724420677,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0090095039101625,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        2,
+        3,
+        5
+      ],
+      "s2_indices": [
+        4
+      ],
+      "label": "{t-1,t-3,t-4,t-6} vs {t-5}",
+      "neg_R": -0.010158815004742472,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0088980801904843,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        2,
+        4,
+        5
+      ],
+      "s2_indices": [
+        1
+      ],
+      "label": "{t-1,t-3,t-5,t-6} vs {t-2}",
+      "neg_R": -0.006897190838341727,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0056364560240836,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        2,
+        4,
+        5
+      ],
+      "s2_indices": [
+        3
+      ],
+      "label": "{t-1,t-3,t-5,t-6} vs {t-4}",
+      "neg_R": -0.008628838603923494,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0073681037896653,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        3,
+        4,
+        5
+      ],
+      "s2_indices": [
+        1
+      ],
+      "label": "{t-1,t-4,t-5,t-6} vs {t-2}",
+      "neg_R": -0.009922557423269529,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0086618226090114,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        3,
+        4,
+        5
+      ],
+      "s2_indices": [
+        2
+      ],
+      "label": "{t-1,t-4,t-5,t-6} vs {t-3}",
+      "neg_R": -0.010808007889091309,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0095472730748332,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "s2_indices": [
+        0
+      ],
+      "label": "{t-2,t-3,t-4,t-5} vs {t-1}",
+      "neg_R": -0.011194925944483458,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0099341911302253,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "s2_indices": [
+        5
+      ],
+      "label": "{t-2,t-3,t-4,t-5} vs {t-6}",
+      "neg_R": -0.009603700553947991,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0083429657396898,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1,
+        2,
+        3,
+        5
+      ],
+      "s2_indices": [
+        0
+      ],
+      "label": "{t-2,t-3,t-4,t-6} vs {t-1}",
+      "neg_R": -0.010872315020002077,
+      "H_A": 0.9987392651857419,
+      "margin": 1.009611580205744,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1,
+        2,
+        3,
+        5
+      ],
+      "s2_indices": [
+        4
+      ],
+      "label": "{t-2,t-3,t-4,t-6} vs {t-5}",
+      "neg_R": -0.00993866320778558,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0086779283935274,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1,
+        2,
+        4,
+        5
+      ],
+      "s2_indices": [
+        0
+      ],
+      "label": "{t-2,t-3,t-5,t-6} vs {t-1}",
+      "neg_R": -0.008642479557048333,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0073817447427902,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1,
+        2,
+        4,
+        5
+      ],
+      "s2_indices": [
+        3
+      ],
+      "label": "{t-2,t-3,t-5,t-6} vs {t-4}",
+      "neg_R": -0.009551899230089145,
+      "H_A": 0.9987392651857419,
+      "margin": 1.008291164415831,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1,
+        3,
+        4,
+        5
+      ],
+      "s2_indices": [
+        0
+      ],
+      "label": "{t-2,t-4,t-5,t-6} vs {t-1}",
+      "neg_R": -0.010254357795655977,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0089936229813978,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1,
+        3,
+        4,
+        5
+      ],
+      "s2_indices": [
+        2
+      ],
+      "label": "{t-2,t-4,t-5,t-6} vs {t-3}",
+      "neg_R": -0.010317580168935025,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0090568453546769,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "s2_indices": [
+        0
+      ],
+      "label": "{t-3,t-4,t-5,t-6} vs {t-1}",
+      "neg_R": -0.010489057102669896,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0092283222884117,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "s2_indices": [
+        1
+      ],
+      "label": "{t-3,t-4,t-5,t-6} vs {t-2}",
+      "neg_R": -0.009666829010128053,
+      "H_A": 0.9987392651857419,
+      "margin": 1.00840609419587,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "s2_indices": [
+        4,
+        5
+      ],
+      "label": "{t-1,t-2,t-3,t-4} vs {t-5,t-6}",
+      "neg_R": -0.0463968645966335,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0451361297823754,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        1,
+        2,
+        4
+      ],
+      "s2_indices": [
+        3,
+        5
+      ],
+      "label": "{t-1,t-2,t-3,t-5} vs {t-4,t-6}",
+      "neg_R": -0.047428801395834164,
+      "H_A": 0.9987392651857419,
+      "margin": 1.046168066581576,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        1,
+        2,
+        5
+      ],
+      "s2_indices": [
+        3,
+        4
+      ],
+      "label": "{t-1,t-2,t-3,t-6} vs {t-4,t-5}",
+      "neg_R": -0.04823300215707915,
+      "H_A": 0.9987392651857419,
+      "margin": 1.046972267342821,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        1,
+        3,
+        4
+      ],
+      "s2_indices": [
+        2,
+        5
+      ],
+      "label": "{t-1,t-2,t-4,t-5} vs {t-3,t-6}",
+      "neg_R": -0.04535647920539487,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0440957443911367,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        1,
+        3,
+        5
+      ],
+      "s2_indices": [
+        2,
+        4
+      ],
+      "label": "{t-1,t-2,t-4,t-6} vs {t-3,t-5}",
+      "neg_R": -0.04551758607165013,
+      "H_A": 0.9987392651857419,
+      "margin": 1.044256851257392,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        1,
+        4,
+        5
+      ],
+      "s2_indices": [
+        2,
+        3
+      ],
+      "label": "{t-1,t-2,t-5,t-6} vs {t-3,t-4}",
+      "neg_R": -0.04876064856565909,
+      "H_A": 0.9987392651857419,
+      "margin": 1.047499913751401,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        2,
+        3,
+        4
+      ],
+      "s2_indices": [
+        1,
+        5
+      ],
+      "label": "{t-1,t-3,t-4,t-5} vs {t-2,t-6}",
+      "neg_R": -0.04590507118627807,
+      "H_A": 0.9987392651857419,
+      "margin": 1.04464433637202,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        2,
+        3,
+        5
+      ],
+      "s2_indices": [
+        1,
+        4
+      ],
+      "label": "{t-1,t-3,t-4,t-6} vs {t-2,t-5}",
+      "neg_R": -0.04682515455745273,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0455644197431946,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        2,
+        4,
+        5
+      ],
+      "s2_indices": [
+        1,
+        3
+      ],
+      "label": "{t-1,t-3,t-5,t-6} vs {t-2,t-4}",
+      "neg_R": -0.04510136228090378,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0438406274666456,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        3,
+        4,
+        5
+      ],
+      "s2_indices": [
+        1,
+        2
+      ],
+      "label": "{t-1,t-4,t-5,t-6} vs {t-2,t-3}",
+      "neg_R": -0.04761305208182698,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0463523172675688,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "s2_indices": [
+        0,
+        5
+      ],
+      "label": "{t-2,t-3,t-4,t-5} vs {t-1,t-6}",
+      "neg_R": -0.04720008816252674,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0459393533482686,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1,
+        2,
+        3,
+        5
+      ],
+      "s2_indices": [
+        0,
+        4
+      ],
+      "label": "{t-2,t-3,t-4,t-6} vs {t-1,t-5}",
+      "neg_R": -0.04739378724418408,
+      "H_A": 0.9987392651857419,
+      "margin": 1.046133052429926,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1,
+        2,
+        4,
+        5
+      ],
+      "s2_indices": [
+        0,
+        3
+      ],
+      "label": "{t-2,t-3,t-5,t-6} vs {t-1,t-4}",
+      "neg_R": -0.04654604986531519,
+      "H_A": 0.9987392651857419,
+      "margin": 1.045285315051057,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1,
+        3,
+        4,
+        5
+      ],
+      "s2_indices": [
+        0,
+        2
+      ],
+      "label": "{t-2,t-4,t-5,t-6} vs {t-1,t-3}",
+      "neg_R": -0.047687395947506594,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0464266611332484,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "s2_indices": [
+        0,
+        1
+      ],
+      "label": "{t-3,t-4,t-5,t-6} vs {t-1,t-2}",
+      "neg_R": -0.04747313729551372,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0462124024812556,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "s2_indices": [
+        5
+      ],
+      "label": "{t-1,t-2,t-3,t-4,t-5} vs {t-6}",
+      "neg_R": -0.03633199549514865,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0350712606808905,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        1,
+        2,
+        3,
+        5
+      ],
+      "s2_indices": [
+        4
+      ],
+      "label": "{t-1,t-2,t-3,t-4,t-6} vs {t-5}",
+      "neg_R": -0.03698956907346762,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0357288342592095,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        1,
+        2,
+        4,
+        5
+      ],
+      "s2_indices": [
+        3
+      ],
+      "label": "{t-1,t-2,t-3,t-5,t-6} vs {t-4}",
+      "neg_R": -0.03883264055872404,
+      "H_A": 0.9987392651857419,
+      "margin": 1.037571905744466,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        1,
+        3,
+        4,
+        5
+      ],
+      "s2_indices": [
+        2
+      ],
+      "label": "{t-1,t-2,t-4,t-5,t-6} vs {t-3}",
+      "neg_R": -0.037986443258967606,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0367257084447095,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        2,
+        3,
+        4,
+        5
+      ],
+      "s2_indices": [
+        1
+      ],
+      "label": "{t-1,t-3,t-4,t-5,t-6} vs {t-2}",
+      "neg_R": -0.03710099279314494,
+      "H_A": 0.9987392651857419,
+      "margin": 1.0358402579788868,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "s2_indices": [
+        0
+      ],
+      "label": "{t-2,t-3,t-4,t-5,t-6} vs {t-1}",
+      "neg_R": -0.03792322088568412,
+      "H_A": 0.9987392651857419,
+      "margin": 1.036662486071426,
+      "assumption_satisfied": true,
+      "error": null
+    }
+  ],
+  "condition1_satisfied": true,
+  "max_neg_R": -0.0005601981903862185,
+  "n_valid_pairs": 462,
+  "n_violations": 0
+}

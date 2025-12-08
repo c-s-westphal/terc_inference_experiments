@@ -74,11 +74,22 @@ if [[ -z "$env_name" || -z "$seed" ]]; then
   exit 1
 fi
 
+# ---------------------------------------------------------------------
+# 5.  Check if output already exists (skip if so)
+# ---------------------------------------------------------------------
+output_file="condition1_validation/results/individual/${env_name}_seed${seed}.json"
+if [[ -f "$output_file" ]]; then
+  echo "Output file already exists: $output_file"
+  echo "Skipping job: $env_name seed=$seed"
+  date
+  exit 0
+fi
+
 date
 echo "Running Condition 1 validation: env=$env_name, seed=$seed"
 
 # ---------------------------------------------------------------------
-# 5.  Run single experiment
+# 6.  Run single experiment
 # ---------------------------------------------------------------------
 echo "Starting validation..."
 python3.9 -u condition1_validation/run_single_validation.py \

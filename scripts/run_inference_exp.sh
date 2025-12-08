@@ -74,11 +74,22 @@ if [[ -z "$env_name" || -z "$state_type" || -z "$seed" ]]; then
   exit 1
 fi
 
+# ---------------------------------------------------------------------
+# 5.  Check if output already exists (skip if so)
+# ---------------------------------------------------------------------
+output_file="results/individual/${env_name}_${state_type}_seed${seed}.json"
+if [[ -f "$output_file" ]]; then
+  echo "Output file already exists: $output_file"
+  echo "Skipping job: $env_name $state_type seed=$seed"
+  date
+  exit 0
+fi
+
 date
 echo "Running TERC inference experiment: env=$env_name, state_type=$state_type, seed=$seed"
 
 # ---------------------------------------------------------------------
-# 5.  Check GPU availability before running
+# 6.  Check GPU availability before running
 # ---------------------------------------------------------------------
 echo "Checking GPU availability..."
 if command -v nvidia-smi &> /dev/null; then
@@ -89,7 +100,7 @@ else
 fi
 
 # ---------------------------------------------------------------------
-# 6.  Run single experiment
+# 7.  Run single experiment
 # ---------------------------------------------------------------------
 echo "Starting experiment..."
 python3.9 -u run_single.py \

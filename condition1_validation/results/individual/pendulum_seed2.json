@@ -1,0 +1,112 @@
+{
+  "environment": "pendulum",
+  "seed": 2,
+  "n_vars": 3,
+  "terc_vars": [
+    "cos_theta",
+    "sin_theta",
+    "theta_dot"
+  ],
+  "state_type": "continuous",
+  "action_type": "continuous",
+  "H_A": 1.9631993115820963,
+  "n_samples": 10000,
+  "k_neighbors": 5,
+  "timestamp": "2025-12-08T14:47:32.940892",
+  "pairs": [
+    {
+      "s1_indices": [
+        0
+      ],
+      "s2_indices": [
+        1,
+        2
+      ],
+      "label": "{cos_theta} vs {sin_theta,theta_dot}",
+      "neg_R": 0.00949732752732571,
+      "H_A": 1.9631993115820963,
+      "margin": 1.9537019840547705,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1
+      ],
+      "s2_indices": [
+        0,
+        2
+      ],
+      "label": "{sin_theta} vs {cos_theta,theta_dot}",
+      "neg_R": -0.008699837262256288,
+      "H_A": 1.9631993115820963,
+      "margin": 1.9718991488443525,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        2
+      ],
+      "s2_indices": [
+        0,
+        1
+      ],
+      "label": "{theta_dot} vs {cos_theta,sin_theta}",
+      "neg_R": 0.01678402400984446,
+      "H_A": 1.9631993115820963,
+      "margin": 1.9464152875722518,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        1
+      ],
+      "s2_indices": [
+        2
+      ],
+      "label": "{cos_theta,sin_theta} vs {theta_dot}",
+      "neg_R": 0.016842351446078985,
+      "H_A": 1.9631993115820963,
+      "margin": 1.9463569601360173,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        0,
+        2
+      ],
+      "s2_indices": [
+        1
+      ],
+      "label": "{cos_theta,theta_dot} vs {sin_theta}",
+      "neg_R": -0.008214165085407368,
+      "H_A": 1.9631993115820963,
+      "margin": 1.9714134766675036,
+      "assumption_satisfied": true,
+      "error": null
+    },
+    {
+      "s1_indices": [
+        1,
+        2
+      ],
+      "s2_indices": [
+        0
+      ],
+      "label": "{sin_theta,theta_dot} vs {cos_theta}",
+      "neg_R": 0.00869471390467786,
+      "H_A": 1.9631993115820963,
+      "margin": 1.9545045976774185,
+      "assumption_satisfied": true,
+      "error": null
+    }
+  ],
+  "condition1_satisfied": true,
+  "max_neg_R": 0.016842351446078985,
+  "n_valid_pairs": 6,
+  "n_violations": 0
+}
