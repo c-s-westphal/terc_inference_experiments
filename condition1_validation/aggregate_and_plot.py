@@ -19,7 +19,38 @@ from typing import Dict, List, Optional
 
 import numpy as np
 import matplotlib.pyplot as plt
-import matplotlib.patches as mpatches
+import matplotlib as mpl
+
+# Style configuration
+TAB_PALETTE = ['tab:blue', 'tab:orange', 'tab:green', 'tab:red', 'tab:purple',
+               'tab:pink', 'tab:brown', 'cyan']
+NULL_MODEL_COLOR = 'black'
+DECOY_COLOR = 'grey'
+ALPHA = 0.5
+
+# Enable LaTeX-style math rendering
+mpl.rcParams['mathtext.fontset'] = 'cm'
+mpl.rcParams['font.family'] = 'serif'
+
+
+def setup_axes_style(ax):
+    """Apply consistent styling to axes."""
+    # Remove all spines
+    for spine in ax.spines.values():
+        spine.set_linewidth(0)
+
+    # White background
+    ax.set_facecolor("white")
+
+    # Y-axis grid only
+    ax.grid(color='gainsboro', axis='y')
+    ax.set_axisbelow(True)
+
+    # Invisible ticks
+    ax.tick_params(axis='both', length=0)
+
+    # Tick label font size
+    ax.tick_params(axis='both', labelsize=9)
 
 
 def load_all_results(input_dir: Path) -> List[dict]:
@@ -102,6 +133,13 @@ def aggregate_by_env(results: List[dict]) -> dict:
     return aggregated
 
 
+def format_pair_label(label: str) -> str:
+    """Convert pair label to LaTeX-friendly format."""
+    # Convert {a,b} vs {c} to $\{a,b\}$ vs $\{c\}$
+    label = label.replace('{', r'$\{$').replace('}', r'$\}$')
+    return label
+
+
 def plot_environment(env_name: str, data: dict, output_dir: Path, top_n: int = 15):
     """Generate bar chart for one environment."""
 
@@ -122,74 +160,48 @@ def plot_environment(env_name: str, data: dict, output_dir: Path, top_n: int = 1
     stds = [p[1]['std'] for p in sorted_pairs]
 
     # Create figure
-    fig, ax = plt.subplots(figsize=(14, 7))
+    fig, ax = plt.subplots(figsize=(8, 4))
 
     x = np.arange(len(labels))
-    bar_colors = ['green' if m < H_A else 'red' for m in means]
 
-    bars = ax.bar(x, means, yerr=stds, capsize=4, color=bar_colors,
-                  edgecolor='black', alpha=0.8, linewidth=1)
+    # Color bars based on whether they're below threshold
+    bar_colors = ['tab:green' if m < H_A else 'tab:red' for m in means]
 
-    # Add threshold line
-    ax.axhline(y=H_A, color='darkred', linestyle='--', linewidth=2.5,
-               label=f'H(A) = {H_A:.3f} bits')
+    # Bar plot
+    ax.bar(x, means, align='center', color=bar_colors, alpha=ALPHA)
 
-    # Determine y-axis limits
+    # Error bars (separate call for styling control)
+    ax.errorbar(x, means, yerr=stds, fmt='none', lw=1, capsize=9, capthick=1,
+                color='black', zorder=10)
+
+    # Threshold line (red dashed)
+    line_x = [-0.5, len(labels) - 0.5]
+    ax.plot(line_x, [H_A, H_A], "--", linewidth=1, color='red',
+            label=r'$H(A) = {:.2f}$ bits'.format(H_A))
+
+    # Apply consistent styling
+    setup_axes_style(ax)
+
+    # Labels with math notation
+    ax.set_xlabel(r'Subset Pairs $(S_1$ vs $S_2)$', fontsize=12)
+    ax.set_ylabel(r'Redundancy $-R$ (bits)', fontsize=12)
+
+    # X-axis labels
+    ax.set_xticks(x)
+    ax.set_xticklabels(labels, rotation=60, ha='right', fontsize=9)
+
+    # Y-axis limits
     y_max = max(max(means) + max(stds) * 1.5 if stds else max(means) * 1.2, H_A * 1.3)
     y_min = min(0, min(means) - max(stds) * 1.5 if stds else min(means) * 1.2)
-
-    # Shade regions
-    ax.fill_between([-0.5, len(labels) - 0.5], H_A, y_max,
-                    color='red', alpha=0.1, label='Assumption NOT verified')
-    ax.fill_between([-0.5, len(labels) - 0.5], y_min, H_A,
-                    color='green', alpha=0.1, label='Assumption satisfied')
-
-    # Labels and formatting
-    ax.set_xlabel('Subset Pairs (S1 vs S2)', fontsize=12)
-    ax.set_ylabel('Redundancy (-R) [bits]', fontsize=12)
-
-    # Title with environment info
-    title = f'Condition 1 Validation: {env_name}'
-    if data.get('terc_vars'):
-        title += f"\nTERC vars: {', '.join(data['terc_vars'])}"
-    ax.set_title(title, fontsize=14, fontweight='bold')
-
-    ax.set_xticks(x)
-    ax.set_xticklabels(labels, rotation=45, ha='right', fontsize=8)
-
     ax.set_ylim(y_min, y_max)
     ax.set_xlim(-0.5, len(labels) - 0.5)
 
     # Legend
-    ax.legend(loc='upper right', fontsize=10)
+    ax.legend(loc='upper right', fontsize=9, frameon=False)
 
-    # Add grid
-    ax.yaxis.grid(True, linestyle=':', alpha=0.7)
-    ax.set_axisbelow(True)
-
-    # Status annotation
-    if data['condition1_satisfied'] is True:
-        status = "SATISFIED"
-        status_color = 'green'
-    elif data['condition1_satisfied'] is False:
-        status = "VIOLATED"
-        status_color = 'red'
-    else:
-        status = "UNDETERMINED"
-        status_color = 'orange'
-
-    ax.annotate(f'Condition 1: {status}',
-                xy=(0.02, 0.98), xycoords='axes fraction',
-                fontsize=12, fontweight='bold', color=status_color,
-                verticalalignment='top',
-                bbox=dict(boxstyle='round', facecolor='white', alpha=0.8))
-
-    # Margin annotation
-    margin = data['margin_mean']
-    ax.annotate(f'Margin: {margin:.4f} bits',
-                xy=(0.02, 0.90), xycoords='axes fraction',
-                fontsize=10, color='black',
-                verticalalignment='top')
+    # Title
+    env_display = env_name.replace('_', ' ').title()
+    ax.set_title(f'Condition 1 Validation: {env_display}', fontsize=12, fontweight='bold')
 
     plt.tight_layout()
 
@@ -217,50 +229,60 @@ def plot_summary_comparison(aggregated: dict, output_dir: Path):
 
     for env in envs:
         data = aggregated[env]
-        env_labels.append(env)
+        # Format environment name
+        env_display = env.replace('_', ' ').replace('tf', 'TF').replace('ipd', 'IPD')
+        env_display = env_display.replace('skg', 'SKG').replace('t', 'T')
+        env_labels.append(env_display)
         margins.append(data['margin_mean'])
         # Approximate margin std from H_A and max_neg_R stds
         margin_stds.append(np.sqrt(data['H_A_std']**2 + data['max_neg_R_std']**2))
 
         if data['condition1_satisfied'] is True:
-            colors.append('green')
+            colors.append('tab:green')
         elif data['condition1_satisfied'] is False:
-            colors.append('red')
+            colors.append('tab:red')
         else:
-            colors.append('orange')
+            colors.append(DECOY_COLOR)
 
     # Create figure
-    fig, ax = plt.subplots(figsize=(12, 6))
+    fig, ax = plt.subplots(figsize=(10, 4))
 
     x = np.arange(len(env_labels))
-    bars = ax.bar(x, margins, yerr=margin_stds, capsize=4,
-                  color=colors, edgecolor='black', alpha=0.8)
 
-    # Add zero line
-    ax.axhline(y=0, color='darkred', linestyle='--', linewidth=2,
-               label='Violation threshold (margin = 0)')
+    # Bar plot
+    ax.bar(x, margins, align='center', color=colors, alpha=ALPHA)
 
-    # Fill regions
+    # Error bars
+    ax.errorbar(x, margins, yerr=margin_stds, fmt='none', lw=1, capsize=9,
+                capthick=1, color='black', zorder=10)
+
+    # Zero threshold line (red dashed)
+    line_x = [-0.5, len(env_labels) - 0.5]
+    ax.plot(line_x, [0, 0], "--", linewidth=1, color='red',
+            label=r'Violation threshold (margin $= 0$)')
+
+    # Apply consistent styling
+    setup_axes_style(ax)
+
+    # Labels with math notation
+    ax.set_xlabel('Environment', fontsize=12)
+    ax.set_ylabel(r'Margin: $H(A) - \max(-R)$ (bits)', fontsize=12)
+
+    # X-axis labels
+    ax.set_xticks(x)
+    ax.set_xticklabels(env_labels, rotation=60, ha='right', fontsize=9)
+
+    # Y-axis limits
     y_max = max(margins) + max(margin_stds) * 1.5 if margins else 1
     y_min = min(min(margins) - max(margin_stds) * 1.5 if margins else 0, -0.1)
-
-    ax.fill_between([-0.5, len(env_labels) - 0.5], 0, y_max,
-                    color='green', alpha=0.1, label='Condition 1 satisfied')
-    ax.fill_between([-0.5, len(env_labels) - 0.5], y_min, 0,
-                    color='red', alpha=0.1, label='Condition 1 violated')
-
-    ax.set_xlabel('Environment', fontsize=12)
-    ax.set_ylabel('Margin: H(A) - max(-R) [bits]', fontsize=12)
-    ax.set_title('Condition 1 Validation Summary\n(Positive margin = satisfied)',
-                 fontsize=14, fontweight='bold')
-
-    ax.set_xticks(x)
-    ax.set_xticklabels(env_labels, rotation=45, ha='right', fontsize=9)
-
     ax.set_ylim(y_min, y_max)
-    ax.legend(loc='best', fontsize=9)
-    ax.yaxis.grid(True, linestyle=':', alpha=0.7)
-    ax.set_axisbelow(True)
+    ax.set_xlim(-0.5, len(env_labels) - 0.5)
+
+    # Legend
+    ax.legend(loc='upper right', fontsize=9, frameon=False)
+
+    # Title
+    ax.set_title('Condition 1 Validation Summary', fontsize=12, fontweight='bold')
 
     plt.tight_layout()
 
