@@ -29,6 +29,28 @@ from training.train_actor_critic import train_actor_critic
 from training.train_ppo import train_ppo
 
 
+def check_gpu_health() -> bool:
+    """
+    Test GPU health by performing a simple operation.
+    Returns True if GPU is healthy, False otherwise.
+    """
+    if not torch.cuda.is_available():
+        return False
+
+    try:
+        # Try to allocate memory and perform a simple operation
+        device = torch.device('cuda')
+        test_tensor = torch.randn(100, 100, device=device)
+        result = torch.matmul(test_tensor, test_tensor)
+        torch.cuda.synchronize()  # Force completion
+        del test_tensor, result
+        torch.cuda.empty_cache()
+        return True
+    except RuntimeError as e:
+        print(f"GPU health check failed: {e}")
+        return False
+
+
 def parse_args():
     parser = argparse.ArgumentParser(description='Single TERC inference experiment')
     parser.add_argument('--env', type=str, required=True,
@@ -181,12 +203,17 @@ def main():
     torch.manual_seed(args.seed)
     np.random.seed(args.seed)
 
-    # Setup device
+    # Setup device with health check
+    device = torch.device('cpu')
     if args.device == 'cuda' and torch.cuda.is_available():
-        device = torch.device('cuda')
-        print(f"Using GPU: {torch.cuda.get_device_name(0)}")
+        print(f"Checking GPU health: {torch.cuda.get_device_name(0)}...")
+        if check_gpu_health():
+            device = torch.device('cuda')
+            print(f"Using GPU: {torch.cuda.get_device_name(0)}")
+        else:
+            print("WARNING: GPU health check failed (possible ECC error). Falling back to CPU.")
+            print("Consider reporting this node to cluster admins.")
     else:
-        device = torch.device('cpu')
         print("Using CPU")
 
     # Get dimensions
