@@ -15,10 +15,9 @@ hostname
 date
 
 # ---------------------------------------------------------------------
-# 0.  Determine script directory and change to repo root
+# 0.  Change to repo root (absolute path for cluster)
 # ---------------------------------------------------------------------
-SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-REPO_ROOT="$( cd "$SCRIPT_DIR/.." && pwd )"
+REPO_ROOT="/SAN/intelsys/syn_vae_datasets2/terc_inference_experiments"
 cd "$REPO_ROOT"
 echo "Working directory: $(pwd)"
 
