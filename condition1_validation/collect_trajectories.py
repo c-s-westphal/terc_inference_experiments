@@ -211,7 +211,7 @@ def collect_ipd_trajectories(
         seed=seed
     )
 
-    terc_size = n_tats - 1
+    terc_size = n_tats  # TERC selects last N consecutive actions
 
     # Load model if provided
     model = None

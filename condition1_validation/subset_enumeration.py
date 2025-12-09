@@ -123,7 +123,7 @@ def get_env_config(env_name: str) -> Dict:
 
     # Add IPD configurations for TF(N)T with N from 3 to 10
     for n in range(3, 11):
-        terc_size = n - 1  # TERC selects last (n-1) actions
+        terc_size = n  # TERC selects last N consecutive actions
         configs[f'ipd_tf{n}t'] = {
             'terc_vars': [f't-{i}' for i in range(1, terc_size + 1)],
             'n_vars': terc_size,
