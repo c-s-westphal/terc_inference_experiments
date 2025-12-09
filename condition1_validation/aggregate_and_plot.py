@@ -96,17 +96,18 @@ def aggregate_by_env(results: List[dict]) -> dict:
         max_neg_R_mean = np.mean(max_neg_R_values) if max_neg_R_values else 0
         max_neg_R_std = np.std(max_neg_R_values) if max_neg_R_values else 0
 
-        # Aggregate pairs across seeds
+        # Aggregate pairs across seeds - use dict for O(1) lookups
         pair_labels = [p['label'] for p in runs[0]['pairs']] if runs[0]['pairs'] else []
         pair_stats = {}
 
+        # Build label->neg_R dicts for each run (O(n) instead of O(n^2))
+        run_pair_dicts = []
+        for run in runs:
+            pair_dict = {p['label']: p['neg_R'] for p in run['pairs'] if p['neg_R'] is not None}
+            run_pair_dicts.append(pair_dict)
+
         for label in pair_labels:
-            neg_Rs = []
-            for run in runs:
-                for p in run['pairs']:
-                    if p['label'] == label and p['neg_R'] is not None:
-                        neg_Rs.append(p['neg_R'])
-                        break
+            neg_Rs = [d[label] for d in run_pair_dicts if label in d]
 
             if neg_Rs:
                 pair_stats[label] = {
@@ -151,17 +152,44 @@ def convert_to_x_notation(label: str) -> str:
         "{x,x_dot} vs {theta}" -> "{X_1,X_2} vs {X_3}"
     """
     # Mapping for gym environment variable names
-    gym_var_mappings = {
-        # CartPole variables
+    # CartPole: x, x_dot, theta, theta_dot -> X_1 to X_4
+    cartpole_mappings = {
         'x': 'X_1',
         'x_dot': 'X_2',
         'theta': 'X_3',
         'theta_dot': 'X_4',
-        # Pendulum variables
+    }
+
+    # Pendulum: cos_theta, sin_theta, theta_dot -> X_1 to X_3
+    pendulum_mappings = {
         'cos_theta': 'X_1',
         'sin_theta': 'X_2',
-        # theta_dot already mapped above for CartPole, reuse X_3 for Pendulum
+        'theta_dot': 'X_3',
     }
+
+    # LunarLander: x, y, x_dot, y_dot, theta, theta_dot, left_leg, right_leg -> X_1 to X_8
+    lunarlander_mappings = {
+        'x': 'X_1',
+        'y': 'X_2',
+        'x_dot': 'X_3',
+        'y_dot': 'X_4',
+        'theta': 'X_5',
+        'theta_dot': 'X_6',
+        'left_leg': 'X_7',
+        'right_leg': 'X_8',
+    }
+
+    # Detect which environment based on variable names in label
+    is_pendulum = 'cos_theta' in label or 'sin_theta' in label
+    is_lunarlander = 'left_leg' in label or 'right_leg' in label or 'y_dot' in label or ('y' in label and 'x' in label)
+
+    if is_pendulum:
+        gym_var_mappings = pendulum_mappings
+    elif is_lunarlander:
+        gym_var_mappings = lunarlander_mappings
+    else:
+        # Default to CartPole
+        gym_var_mappings = cartpole_mappings
 
     # Check if label contains gym variable names
     has_gym_vars = any(var in label for var in gym_var_mappings.keys())
@@ -171,11 +199,7 @@ def convert_to_x_notation(label: str) -> str:
         # Sort by length descending to replace longer names first (e.g., theta_dot before theta)
         for var in sorted(gym_var_mappings.keys(), key=len, reverse=True):
             if var in result:
-                # For Pendulum, theta_dot should be X_3
-                if var == 'theta_dot' and 'cos_theta' in label:
-                    result = result.replace(var, 'X_3')
-                else:
-                    result = result.replace(var, gym_var_mappings[var])
+                result = result.replace(var, gym_var_mappings[var])
         return result
 
     # Handle "t-N" notation (IPD environments)

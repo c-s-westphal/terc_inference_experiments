@@ -9,9 +9,9 @@ State representation: History of opponent's last M actions (binary: 0=cooperate,
 Action space: Binary (0=cooperate, 1=defect)
 
 For TF(N)T opponent:
-- TERC-selected variables are the last (N-1) opponent actions
+- TERC-selected variables are the last N consecutive player actions
 - Because the optimal response depends on whether opponent will defect,
-  which depends on your last (N-1) defections
+  which depends on your last N defections
 """
 
 import gymnasium as gym
@@ -183,14 +183,14 @@ class IPDEnvironment(gym.Env):
         """
         Get indices of TERC-selected variables.
 
-        For TF(N)T opponent, the relevant variables are the last (N-1) player actions,
+        For TF(N)T opponent, the relevant variables are the last N player actions,
         as these determine whether the opponent will switch to defection.
 
         Returns indices from the END of the history (most recent actions).
         """
-        # The last (n_tats - 1) positions in the history
-        # These are indices from the end: history_length - (n_tats - 1) to history_length - 1
-        terc_size = self.n_tats - 1
+        # The last N positions in the history
+        # These are indices from the end: history_length - N to history_length - 1
+        terc_size = self.n_tats  # Use N variables for TF(N)T
         start_idx = self.history_length - terc_size
         return list(range(start_idx, self.history_length))
 
@@ -277,14 +277,14 @@ if __name__ == '__main__':
     print(f"\nTotal reward: {total_reward}")
 
     # Test with TERC state
-    print("\n\nTesting with TERC state (TF3T → 2 variables):")
+    print("\n\nTesting with TERC state (TF3T → 3 variables):")
     env_terc = make_ipd_env(n_tats=3, history_length=10, use_terc_state=True, seed=42)
     obs_terc, _ = env_terc.reset()
     print(f"TERC state shape: {obs_terc.shape}")
     print(f"TERC state: {obs_terc}")
 
     # Test TF5T
-    print("\n\nTesting TF5T opponent (4 TERC variables):")
+    print("\n\nTesting TF5T opponent (5 TERC variables):")
     env5 = make_ipd_env(n_tats=5, history_length=10, seed=42)
     obs5, _ = env5.reset()
     print(f"Full state shape: {obs5.shape}")
